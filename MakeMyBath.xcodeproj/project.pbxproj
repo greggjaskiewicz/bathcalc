@@ -23,6 +23,37 @@
 		27B8121616961D890055E964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F116961D890055E964 /* Foundation.framework */; };
 		27B8121E16961D890055E964 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B8121C16961D890055E964 /* InfoPlist.strings */; };
 		27B8122116961D890055E964 /* MakeMyBathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8122016961D890055E964 /* MakeMyBathTests.m */; };
+		27B812321696207B0055E964 /* cold_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122B1696207B0055E964 /* cold_tap.png */; };
+		27B812331696207B0055E964 /* cold_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122B1696207B0055E964 /* cold_tap.png */; };
+		27B812341696207B0055E964 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122C1696207B0055E964 /* dial.png */; };
+		27B812351696207B0055E964 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122C1696207B0055E964 /* dial.png */; };
+		27B812361696207B0055E964 /* hot_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122D1696207B0055E964 /* hot_tap.png */; };
+		27B812371696207B0055E964 /* hot_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122D1696207B0055E964 /* hot_tap.png */; };
+		27B812381696207B0055E964 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122E1696207B0055E964 /* tile.png */; };
+		27B812391696207B0055E964 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122E1696207B0055E964 /* tile.png */; };
+		27B8123A1696207B0055E964 /* water_level_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122F1696207B0055E964 /* water_level_background.png */; };
+		27B8123B1696207B0055E964 /* water_level_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122F1696207B0055E964 /* water_level_background.png */; };
+		27B8123C1696207B0055E964 /* water_level_markings.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812301696207B0055E964 /* water_level_markings.png */; };
+		27B8123D1696207B0055E964 /* water_level_markings.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812301696207B0055E964 /* water_level_markings.png */; };
+		27B8123E1696207B0055E964 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812311696207B0055E964 /* water.png */; };
+		27B8123F1696207B0055E964 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812311696207B0055E964 /* water.png */; };
+		27B812471696215B0055E964 /* cold_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812401696215B0055E964 /* cold_tap@2x.png */; };
+		27B812481696215B0055E964 /* cold_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812401696215B0055E964 /* cold_tap@2x.png */; };
+		27B812491696215B0055E964 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812411696215B0055E964 /* dial@2x.png */; };
+		27B8124A1696215B0055E964 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812411696215B0055E964 /* dial@2x.png */; };
+		27B8124B1696215B0055E964 /* hot_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812421696215B0055E964 /* hot_tap@2x.png */; };
+		27B8124C1696215B0055E964 /* hot_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812421696215B0055E964 /* hot_tap@2x.png */; };
+		27B8124D1696215B0055E964 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812431696215B0055E964 /* tile@2x.png */; };
+		27B8124E1696215B0055E964 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812431696215B0055E964 /* tile@2x.png */; };
+		27B8124F1696215B0055E964 /* water_level_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812441696215B0055E964 /* water_level_background@2x.png */; };
+		27B812501696215B0055E964 /* water_level_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812441696215B0055E964 /* water_level_background@2x.png */; };
+		27B812511696215B0055E964 /* water_level_markings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812451696215B0055E964 /* water_level_markings@2x.png */; };
+		27B812521696215B0055E964 /* water_level_markings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812451696215B0055E964 /* water_level_markings@2x.png */; };
+		27B812531696215B0055E964 /* water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812461696215B0055E964 /* water@2x.png */; };
+		27B812541696215B0055E964 /* water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812461696215B0055E964 /* water@2x.png */; };
+		27B81256169628FB0055E964 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B81255169628FA0055E964 /* QuartzCore.framework */; };
+		27B81259169631D30055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81258169631D30055E964 /* TapViewController.m */; };
+		27B8125A169631D30055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81258169631D30055E964 /* TapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +89,23 @@
 		27B8121D16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27B8121F16961D890055E964 /* MakeMyBathTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeMyBathTests.h; sourceTree = "<group>"; };
 		27B8122016961D890055E964 /* MakeMyBathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeMyBathTests.m; sourceTree = "<group>"; };
+		27B8122B1696207B0055E964 /* cold_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cold_tap.png; path = resources/cold_tap.png; sourceTree = "<group>"; };
+		27B8122C1696207B0055E964 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = resources/dial.png; sourceTree = "<group>"; };
+		27B8122D1696207B0055E964 /* hot_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hot_tap.png; path = resources/hot_tap.png; sourceTree = "<group>"; };
+		27B8122E1696207B0055E964 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = resources/tile.png; sourceTree = "<group>"; };
+		27B8122F1696207B0055E964 /* water_level_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water_level_background.png; path = resources/water_level_background.png; sourceTree = "<group>"; };
+		27B812301696207B0055E964 /* water_level_markings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water_level_markings.png; path = resources/water_level_markings.png; sourceTree = "<group>"; };
+		27B812311696207B0055E964 /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water.png; path = resources/water.png; sourceTree = "<group>"; };
+		27B812401696215B0055E964 /* cold_tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cold_tap@2x.png"; path = "resources/cold_tap@2x.png"; sourceTree = "<group>"; };
+		27B812411696215B0055E964 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "resources/dial@2x.png"; sourceTree = "<group>"; };
+		27B812421696215B0055E964 /* hot_tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hot_tap@2x.png"; path = "resources/hot_tap@2x.png"; sourceTree = "<group>"; };
+		27B812431696215B0055E964 /* tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile@2x.png"; path = "resources/tile@2x.png"; sourceTree = "<group>"; };
+		27B812441696215B0055E964 /* water_level_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water_level_background@2x.png"; path = "resources/water_level_background@2x.png"; sourceTree = "<group>"; };
+		27B812451696215B0055E964 /* water_level_markings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water_level_markings@2x.png"; path = "resources/water_level_markings@2x.png"; sourceTree = "<group>"; };
+		27B812461696215B0055E964 /* water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water@2x.png"; path = "resources/water@2x.png"; sourceTree = "<group>"; };
+		27B81255169628FA0055E964 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		27B81257169631D30055E964 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
+		27B81258169631D30055E964 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B81256169628FB0055E964 /* QuartzCore.framework in Frameworks */,
 				27B811F016961D890055E964 /* UIKit.framework in Frameworks */,
 				27B811F216961D890055E964 /* Foundation.framework in Frameworks */,
 				27B811F416961D890055E964 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +155,7 @@
 		27B811EE16961D890055E964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27B81255169628FA0055E964 /* QuartzCore.framework */,
 				27B811EF16961D890055E964 /* UIKit.framework */,
 				27B811F116961D890055E964 /* Foundation.framework */,
 				27B811F316961D890055E964 /* CoreGraphics.framework */,
@@ -117,11 +167,14 @@
 		27B811F516961D890055E964 /* MakeMyBath */ = {
 			isa = PBXGroup;
 			children = (
+				27B8122A1696205A0055E964 /* resources */,
 				27B811FE16961D890055E964 /* AppDelegate.h */,
 				27B811FF16961D890055E964 /* AppDelegate.m */,
 				27B8120716961D890055E964 /* ViewController.h */,
 				27B8120816961D890055E964 /* ViewController.m */,
 				27B8120A16961D890055E964 /* ViewController.xib */,
+				27B81257169631D30055E964 /* TapViewController.h */,
+				27B81258169631D30055E964 /* TapViewController.m */,
 				27B811F616961D890055E964 /* Supporting Files */,
 			);
 			path = MakeMyBath;
@@ -158,6 +211,27 @@
 				27B8121C16961D890055E964 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27B8122A1696205A0055E964 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				27B812401696215B0055E964 /* cold_tap@2x.png */,
+				27B812411696215B0055E964 /* dial@2x.png */,
+				27B812421696215B0055E964 /* hot_tap@2x.png */,
+				27B812431696215B0055E964 /* tile@2x.png */,
+				27B812441696215B0055E964 /* water_level_background@2x.png */,
+				27B812451696215B0055E964 /* water_level_markings@2x.png */,
+				27B812461696215B0055E964 /* water@2x.png */,
+				27B8122B1696207B0055E964 /* cold_tap.png */,
+				27B8122C1696207B0055E964 /* dial.png */,
+				27B8122D1696207B0055E964 /* hot_tap.png */,
+				27B8122E1696207B0055E964 /* tile.png */,
+				27B8122F1696207B0055E964 /* water_level_background.png */,
+				27B812301696207B0055E964 /* water_level_markings.png */,
+				27B812311696207B0055E964 /* water.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +310,20 @@
 				27B8120416961D890055E964 /* Default@2x.png in Resources */,
 				27B8120616961D890055E964 /* Default-568h@2x.png in Resources */,
 				27B8120C16961D890055E964 /* ViewController.xib in Resources */,
+				27B812321696207B0055E964 /* cold_tap.png in Resources */,
+				27B812341696207B0055E964 /* dial.png in Resources */,
+				27B812361696207B0055E964 /* hot_tap.png in Resources */,
+				27B812381696207B0055E964 /* tile.png in Resources */,
+				27B8123A1696207B0055E964 /* water_level_background.png in Resources */,
+				27B8123C1696207B0055E964 /* water_level_markings.png in Resources */,
+				27B8123E1696207B0055E964 /* water.png in Resources */,
+				27B812471696215B0055E964 /* cold_tap@2x.png in Resources */,
+				27B812491696215B0055E964 /* dial@2x.png in Resources */,
+				27B8124B1696215B0055E964 /* hot_tap@2x.png in Resources */,
+				27B8124D1696215B0055E964 /* tile@2x.png in Resources */,
+				27B8124F1696215B0055E964 /* water_level_background@2x.png in Resources */,
+				27B812511696215B0055E964 /* water_level_markings@2x.png in Resources */,
+				27B812531696215B0055E964 /* water@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +332,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B8121E16961D890055E964 /* InfoPlist.strings in Resources */,
+				27B812331696207B0055E964 /* cold_tap.png in Resources */,
+				27B812351696207B0055E964 /* dial.png in Resources */,
+				27B812371696207B0055E964 /* hot_tap.png in Resources */,
+				27B812391696207B0055E964 /* tile.png in Resources */,
+				27B8123B1696207B0055E964 /* water_level_background.png in Resources */,
+				27B8123D1696207B0055E964 /* water_level_markings.png in Resources */,
+				27B8123F1696207B0055E964 /* water.png in Resources */,
+				27B812481696215B0055E964 /* cold_tap@2x.png in Resources */,
+				27B8124A1696215B0055E964 /* dial@2x.png in Resources */,
+				27B8124C1696215B0055E964 /* hot_tap@2x.png in Resources */,
+				27B8124E1696215B0055E964 /* tile@2x.png in Resources */,
+				27B812501696215B0055E964 /* water_level_background@2x.png in Resources */,
+				27B812521696215B0055E964 /* water_level_markings@2x.png in Resources */,
+				27B812541696215B0055E964 /* water@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +375,7 @@
 				27B811FC16961D890055E964 /* main.m in Sources */,
 				27B8120016961D890055E964 /* AppDelegate.m in Sources */,
 				27B8120916961D890055E964 /* ViewController.m in Sources */,
+				27B81259169631D30055E964 /* TapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B8122116961D890055E964 /* MakeMyBathTests.m in Sources */,
+				27B8125A169631D30055E964 /* TapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +451,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -371,7 +475,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -384,6 +488,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
 				INFOPLIST_FILE = "MakeMyBath/MakeMyBath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +500,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
 				INFOPLIST_FILE = "MakeMyBath/MakeMyBath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
