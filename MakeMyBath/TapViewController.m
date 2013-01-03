@@ -16,6 +16,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 @property (nonatomic, strong) UIImageView *tapImageView;
 @property (nonatomic, strong) UIImage *tapImage;
 @property                     CGPoint lastTapPoint;
+@property (nonatomic)         double currentRotation;
 
 @end
 
@@ -55,15 +56,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 // do the nice touch controls
 
-static float calculateDistanceBetweenPoints(CGPoint point1, CGPoint point2)
-{
-	float dx = point1.x - point2.x;
-	float dy = point1.y - point2.y;
-  
-	return sqrt(dx*dx + dy*dy);
-}
-
-double wrapd(double val, double min, double max)
+static double wrap(double val, double min, double max)
 {
   if (val < min) return max - (min - val);
   if (val > max) return min - (max - val);
@@ -74,14 +67,33 @@ double wrapd(double val, double min, double max)
 {
   CGPoint center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
   
-  float fromAngle = atan2(p1.y-center.y, p1.x-center.x);
-  float toAngle   = atan2(p2.y-center.y, p2.x-center.x);
+  double fromAngle = atan2(p1.y-center.y, p1.x-center.x);
+  double toAngle   = atan2(p2.y-center.y, p2.x-center.x);
 
-  float deltaAngle = wrapd(toAngle - fromAngle, -M_PI, M_PI ) * 60; // magic value
+  double deltaAngle = wrap(toAngle - fromAngle, -M_PI, M_PI ) * 60; // magic value
   
-  NSLog(@"delta Angle %f", deltaAngle);
+  //  NSLog(@"delta Angle %f, from: %f, to: %f", deltaAngle, fromAngle, toAngle);
+
+  if (self.currentRotation + deltaAngle > 359)
+  {
+    deltaAngle = 359 - self.currentRotation;
+  }
   
-  [self rotateLayer:self.tapImageView.layer by:deltaAngle];
+  if (self.currentRotation + deltaAngle < 0.0)
+  {
+    deltaAngle = -self.currentRotation;
+  }
+  
+  if (fabs(deltaAngle) > DBL_EPSILON)
+  {
+    self.currentRotation += deltaAngle;
+    [self rotateLayer:self.tapImageView.layer by:deltaAngle];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapViewController:valueChangedTo:)])
+    {
+      [self.delegate tapViewController:self valueChangedTo:self.currentRotation];
+    }
+  }
 }
 
 
@@ -129,10 +141,10 @@ double wrapd(double val, double min, double max)
   UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotation:)];
   
   [self.view addGestureRecognizer:rotate];
-  
+  self.currentRotation = 0.0;
   /*
-   float deg = random();
-   deg /= (float)RAND_MAX/180.0;
+   double deg = random();
+   deg /= (double)RAND_MAX/180.0;
    [self rotateLayer:self.tapImageView.layer by:deg];
    */
 }
