@@ -56,6 +56,7 @@
 		27B8125A169631D30055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81258169631D30055E964 /* TapViewController.m */; };
 		27B8126116988EBD0055E964 /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126016988EBD0055E964 /* DialViewController.m */; };
 		27B8126416988F210055E964 /* DialHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126316988F210055E964 /* DialHand.m */; };
+		27B812691698A9970055E964 /* DialHandLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B812681698A9970055E964 /* DialHandLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		27B8126016988EBD0055E964 /* DialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialViewController.m; path = dial/DialViewController.m; sourceTree = "<group>"; };
 		27B8126216988F210055E964 /* DialHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialHand.h; path = dial/DialHand.h; sourceTree = "<group>"; };
 		27B8126316988F210055E964 /* DialHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialHand.m; path = dial/DialHand.m; sourceTree = "<group>"; };
+		27B812671698A9960055E964 /* DialHandLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialHandLayer.h; path = dial/DialHandLayer.h; sourceTree = "<group>"; };
+		27B812681698A9970055E964 /* DialHandLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialHandLayer.m; path = dial/DialHandLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +251,8 @@
 				27B8126016988EBD0055E964 /* DialViewController.m */,
 				27B8126216988F210055E964 /* DialHand.h */,
 				27B8126316988F210055E964 /* DialHand.m */,
+				27B812671698A9960055E964 /* DialHandLayer.h */,
+				27B812681698A9970055E964 /* DialHandLayer.m */,
 			);
 			name = dial;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				27B81259169631D30055E964 /* TapViewController.m in Sources */,
 				27B8126116988EBD0055E964 /* DialViewController.m in Sources */,
 				27B8126416988F210055E964 /* DialHand.m in Sources */,
+				27B812691698A9970055E964 /* DialHandLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

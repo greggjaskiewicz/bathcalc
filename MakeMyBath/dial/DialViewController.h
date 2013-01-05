@@ -10,4 +10,6 @@
 
 @interface DialViewController : UIViewController
 
+@property(nonatomic) CGFloat temperature; // 0-100
+
 @end

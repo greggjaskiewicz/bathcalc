@@ -25,6 +25,19 @@
   
 }
 
+- (void)animateTemp
+{
+  double delayInSeconds = 0.15;
+  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    CGFloat r = random();
+    r = r/(float)RAND_MAX;
+    r *= 100;
+    self.temperatureDial.temperature = r;
+    
+    [self animateTemp];
+  });
+}
 
 - (void)viewDidLoad
 {
@@ -58,6 +71,15 @@
   CGRect dialRect = self.temperatureDial.view.bounds;
   dialRect.origin = CGPointMake(self.view.frame.size.width/2-self.temperatureDial.view.frame.size.width/2, 120);
   self.temperatureDial.view.frame = dialRect;
+  
+  self.temperatureDial.temperature = 0.0f;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  
+  [self animateTemp];
 }
 
 - (void)didReceiveMemoryWarning

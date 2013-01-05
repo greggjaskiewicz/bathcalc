@@ -16,6 +16,16 @@
 
 @implementation DialViewController
 
+- (void)setTemperature:(CGFloat)temperature
+{
+  self.dialHand.angle = (temperature/100.0)*180.0;
+}
+
+- (CGFloat)angle
+{
+  return self.dialHand.angle;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +53,8 @@
   
   self.dialHand = [[DialHand alloc] initWithFrame:frame];
   [self.view addSubview:self.dialHand];
+  
+  self.dialHand.angle = 0.0f;
 }
 
 - (void)didReceiveMemoryWarning
