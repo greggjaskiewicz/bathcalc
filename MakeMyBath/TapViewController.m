@@ -32,9 +32,29 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)rotateLayer:(CALayer*)layer by:(CGFloat)deg
 {
   [UIView beginAnimations:@"rotate" context:nil];
+  [UIView setAnimationDuration:0.1];
   [layer setTransform:
    CATransform3DRotate(layer.transform, radians(deg), 0.0f, 0.0f, 1.0f)];
   [UIView commitAnimations];
+}
+
+- (void)setCurrentValue:(CGFloat)currentValue
+{
+  _currentValue = currentValue;
+  
+  
+  CGFloat deltaRotation = currentValue * 359.9 - _currentRotation;
+  
+  
+  [self rotateLayer:self.tapImageView.layer by:deltaRotation];
+
+  self.currentRotation = currentValue * 359.9;
+}
+
+- (void)setCurrentRotation:(double)currentRotation
+{
+  _currentRotation = currentRotation;
+  _currentValue = currentRotation/359.9;
 }
 
 
@@ -91,7 +111,7 @@ static double wrap(double val, double min, double max)
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(tapViewController:valueChangedTo:)])
     {
-      [self.delegate tapViewController:self valueChangedTo:self.currentRotation];
+      [self.delegate tapViewController:self valueChangedTo:self.currentValue];
     }
   }
 }

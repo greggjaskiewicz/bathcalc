@@ -15,6 +15,7 @@
 @property(nonatomic, strong) TapViewController *coldTap;
 @property(nonatomic, strong) TapViewController *warmTap;
 @property(nonatomic, strong) DialViewController *temperatureDial;
+@property(nonatomic) CGFloat temperature;
 
 @end
 
@@ -22,18 +23,26 @@
 
 - (void)tapViewController:(TapViewController *)tapViewController valueChangedTo:(CGFloat)newValue
 {
-  
+  self.temperature = (self.warmTap.currentValue * 100) - (self.coldTap.currentValue*self.warmTap.currentValue*100);
+  self.temperatureDial.temperature  = self.temperature;
 }
 
 - (void)animateTemp
 {
-  double delayInSeconds = 0.35;
+  //  return;
+  double delayInSeconds = 0.45;
   dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
   dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
     CGFloat r = random();
     r = r/(float)RAND_MAX;
-    r *= 100;
+    r *= 100.0;
     self.temperatureDial.temperature = r;
+    
+    r = r/100.0;
+    
+    // set taps too !
+    self.coldTap.currentValue = 1-r;
+    self.warmTap.currentValue = r;
     
     [self animateTemp];
   });

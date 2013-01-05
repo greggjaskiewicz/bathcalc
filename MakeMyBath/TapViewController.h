@@ -23,4 +23,6 @@
 - (id)initWithTapImage:(UIImage*)tapImage;
 @property(nonatomic, weak) NSObject<TapViewControllerDelegate> *delegate;
 
+@property(nonatomic) CGFloat currentValue; // 0.0 - 1.0
+
 @end
