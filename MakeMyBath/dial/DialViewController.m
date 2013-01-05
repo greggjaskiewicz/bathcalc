@@ -12,13 +12,30 @@
 @interface DialViewController ()
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) DialHand    *dialHand;
+
+@property (nonatomic, strong) NSArray     *digits;
+
 @end
 
 @implementation DialViewController
 
+- (void)setDigitTemperature
+{
+  CGFloat div = 100;
+  for(UILabel *l in self.digits)
+  {
+    CGFloat dig = self.temperature/div;
+    dig = fmodf(dig, 10.0f);
+    l.text = [NSString stringWithFormat:@"%d",(int)dig];
+    div = div/10;
+  }
+}
+
 - (void)setTemperature:(CGFloat)temperature
 {
   self.dialHand.angle = (temperature/100.0)*180.0;
+  _temperature = temperature;
+  [self setDigitTemperature];
 }
 
 - (CGFloat)angle
@@ -55,6 +72,23 @@
   [self.view addSubview:self.dialHand];
   
   self.dialHand.angle = 0.0f;
+  
+  NSMutableArray *dl = [@[] mutableCopy];
+  CGRect lrect = CGRectMake(64, 122, 18, 26);
+  for(int i=0;i<3;i++)
+  {
+    UILabel *l = [[UILabel alloc] initWithFrame:lrect];
+    UIFont *f = [UIFont fontWithName:@"Arial-BoldMT" size:21];
+    l.font = f;
+    l.backgroundColor = [UIColor clearColor];
+    l.textColor = [UIColor whiteColor];
+    l.shadowOffset = CGSizeMake(2, 2);
+    [dl addObject:l];
+    [self.view addSubview:l];
+    lrect.origin.x += 3+18;
+  }
+  
+  self.digits = [dl copy];
 }
 
 - (void)didReceiveMemoryWarning

@@ -50,7 +50,11 @@ static CGPoint pointOnCircle(const CGFloat radius, const CGFloat angle)
   static const CGFloat pitch_line_width = 4.0;
   
   //  CGContextSetShadowWithColor(context, CGSizeMake(2,2), -1.5, [UIColor lightGrayColor].CGColor);
-  CGContextSetShadow(context, CGSizeMake(2, 2), 4);
+  
+  CGFloat shadowOffset = 1.0 - sin((self.angle*M_PI)/180.0);
+  CGSize shadow = CGSizeMake(shadowOffset*2.5, shadowOffset*2);
+  
+  CGContextSetShadow(context, shadow, 2.5);
   
   /* draw lines */
   CGContextSetRGBStrokeColor(context, 0.9, 0.0, 0.0, 0.9);
