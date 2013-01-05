@@ -10,7 +10,7 @@
 
 @class TapViewController;
 
-@protocol tapViewControllerDelegate <NSObject>
+@protocol TapViewControllerDelegate <NSObject>
 
 @optional
 
@@ -21,6 +21,6 @@
 @interface TapViewController : UIViewController
 
 - (id)initWithTapImage:(UIImage*)tapImage;
-@property(nonatomic, weak) NSObject<tapViewControllerDelegate> *delegate;
+@property(nonatomic, weak) NSObject<TapViewControllerDelegate> *delegate;
 
 @end

@@ -8,16 +8,24 @@
 
 #import "ViewController.h"
 #import "TapViewController.h"
+#import "DialViewController.h"
 
-
-@interface ViewController ()
+@interface ViewController () <TapViewControllerDelegate>
 
 @property(nonatomic, strong) TapViewController *coldTap;
 @property(nonatomic, strong) TapViewController *warmTap;
+@property(nonatomic, strong) DialViewController *temperatureDial;
 
 @end
 
 @implementation ViewController
+
+- (void)tapViewController:(TapViewController *)tapViewController valueChangedTo:(CGFloat)newValue
+{
+  
+}
+
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -39,6 +47,17 @@
 
   self.coldTap.view.frame =  CGRectMake(190, 322, self.coldTap.view.bounds.size.width, self.coldTap.view.bounds.size.height);
   self.warmTap.view.frame =  CGRectMake(20,  322, self.warmTap.view.bounds.size.width, self.warmTap.view.bounds.size.height);
+  
+  self.coldTap.delegate = self;
+  self.warmTap.delegate = self;
+  
+  self.temperatureDial = [[DialViewController alloc] init];
+  [self addChildViewController:self.temperatureDial];
+  [self.view addSubview:self.temperatureDial.view];
+  
+  CGRect dialRect = self.temperatureDial.view.bounds;
+  dialRect.origin = CGPointMake(self.view.frame.size.width/2-self.temperatureDial.view.frame.size.width/2, 120);
+  self.temperatureDial.view.frame = dialRect;
 }
 
 - (void)didReceiveMemoryWarning

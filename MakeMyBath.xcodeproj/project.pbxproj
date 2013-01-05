@@ -54,6 +54,8 @@
 		27B81256169628FB0055E964 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B81255169628FA0055E964 /* QuartzCore.framework */; };
 		27B81259169631D30055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81258169631D30055E964 /* TapViewController.m */; };
 		27B8125A169631D30055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81258169631D30055E964 /* TapViewController.m */; };
+		27B8126116988EBD0055E964 /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126016988EBD0055E964 /* DialViewController.m */; };
+		27B8126416988F210055E964 /* DialHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126316988F210055E964 /* DialHand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,10 @@
 		27B81255169628FA0055E964 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		27B81257169631D30055E964 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
 		27B81258169631D30055E964 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
+		27B8125F16988EBD0055E964 /* DialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialViewController.h; path = dial/DialViewController.h; sourceTree = "<group>"; };
+		27B8126016988EBD0055E964 /* DialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialViewController.m; path = dial/DialViewController.m; sourceTree = "<group>"; };
+		27B8126216988F210055E964 /* DialHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialHand.h; path = dial/DialHand.h; sourceTree = "<group>"; };
+		27B8126316988F210055E964 /* DialHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialHand.m; path = dial/DialHand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		27B811F516961D890055E964 /* MakeMyBath */ = {
 			isa = PBXGroup;
 			children = (
+				27B8125E16988E900055E964 /* dial */,
 				27B8122A1696205A0055E964 /* resources */,
 				27B811FE16961D890055E964 /* AppDelegate.h */,
 				27B811FF16961D890055E964 /* AppDelegate.m */,
@@ -217,21 +224,32 @@
 			isa = PBXGroup;
 			children = (
 				27B812401696215B0055E964 /* cold_tap@2x.png */,
-				27B812411696215B0055E964 /* dial@2x.png */,
-				27B812421696215B0055E964 /* hot_tap@2x.png */,
-				27B812431696215B0055E964 /* tile@2x.png */,
-				27B812441696215B0055E964 /* water_level_background@2x.png */,
-				27B812451696215B0055E964 /* water_level_markings@2x.png */,
-				27B812461696215B0055E964 /* water@2x.png */,
 				27B8122B1696207B0055E964 /* cold_tap.png */,
+				27B812411696215B0055E964 /* dial@2x.png */,
 				27B8122C1696207B0055E964 /* dial.png */,
+				27B812421696215B0055E964 /* hot_tap@2x.png */,
 				27B8122D1696207B0055E964 /* hot_tap.png */,
+				27B812431696215B0055E964 /* tile@2x.png */,
 				27B8122E1696207B0055E964 /* tile.png */,
+				27B812441696215B0055E964 /* water_level_background@2x.png */,
 				27B8122F1696207B0055E964 /* water_level_background.png */,
+				27B812451696215B0055E964 /* water_level_markings@2x.png */,
 				27B812301696207B0055E964 /* water_level_markings.png */,
+				27B812461696215B0055E964 /* water@2x.png */,
 				27B812311696207B0055E964 /* water.png */,
 			);
 			name = resources;
+			sourceTree = "<group>";
+		};
+		27B8125E16988E900055E964 /* dial */ = {
+			isa = PBXGroup;
+			children = (
+				27B8125F16988EBD0055E964 /* DialViewController.h */,
+				27B8126016988EBD0055E964 /* DialViewController.m */,
+				27B8126216988F210055E964 /* DialHand.h */,
+				27B8126316988F210055E964 /* DialHand.m */,
+			);
+			name = dial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +394,8 @@
 				27B8120016961D890055E964 /* AppDelegate.m in Sources */,
 				27B8120916961D890055E964 /* ViewController.m in Sources */,
 				27B81259169631D30055E964 /* TapViewController.m in Sources */,
+				27B8126116988EBD0055E964 /* DialViewController.m in Sources */,
+				27B8126416988F210055E964 /* DialHand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +579,7 @@
 				27B8122616961D890055E964 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27B8122716961D890055E964 /* Build configuration list for PBXNativeTarget "MakeMyBathTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +588,7 @@
 				27B8122916961D890055E964 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
