@@ -47,7 +47,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   self.feedbackView.value = currentValue;
   
   CGFloat deltaRotation = currentValue * 359.9 - _currentRotation;
-    
+  
   [self rotateLayer:self.tapImageView.layer by:deltaRotation];
   self.currentRotation = currentValue * 359.9;
 }
@@ -97,11 +97,11 @@ static double wrap(double val, double min, double max)
   
   double fromAngle = atan2(p1.y-center.y, p1.x-center.x);
   double toAngle   = atan2(p2.y-center.y, p2.x-center.x);
-
+  
   double deltaAngle = wrap(toAngle - fromAngle, -M_PI, M_PI ) * 60; // magic value
   
   //  NSLog(@"delta Angle %f, from: %f, to: %f", deltaAngle, fromAngle, toAngle);
-
+  
   if (self.currentRotation + deltaAngle > 359)
   {
     deltaAngle = 359 - self.currentRotation;
@@ -127,25 +127,34 @@ static double wrap(double val, double min, double max)
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  UITouch *touch = [touches anyObject];
-  CGPoint touchPoint = [touch locationInView:self.view];
-  
-  self.lastTapPoint = touchPoint;
+  if (self.enabled)
+  {
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    
+    self.lastTapPoint = touchPoint;
+  }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  UITouch *touch = [touches anyObject];
-  CGPoint touchPoint = [touch locationInView:self.view];
-  
-  [self rotateTapFromPoint:self.lastTapPoint toPoint:touchPoint];
-  
-  self.lastTapPoint = touchPoint;
+  if (self.enabled)
+  {
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    
+    [self rotateTapFromPoint:self.lastTapPoint toPoint:touchPoint];
+    
+    self.lastTapPoint = touchPoint;
+  }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  [self touchesMoved:touches withEvent:event];
+  if (self.enabled)
+  {
+    [self touchesMoved:touches withEvent:event];
+  }
 }
 
 
@@ -171,9 +180,9 @@ static double wrap(double val, double min, double max)
   }
   
   self.feedbackView = [[TapStatusFeedbackView alloc] initWithFrame:frame andColour:feedbackColour andRadius:radius];
-
+  
   [self.view addSubview:self.feedbackView];
-
+  
   
   self.view.frame = frame;
   self.tapImageView = [[UIImageView alloc] initWithImage:self.tapImage];
@@ -188,6 +197,7 @@ static double wrap(double val, double min, double max)
   
   [self.view addGestureRecognizer:rotate];
   self.currentRotation = 0.0;
+  self.enabled = YES;
   
   /*
    double deg = random();

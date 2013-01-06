@@ -28,6 +28,7 @@ enum taps_t
 
 - (id)initWithTap:(enum taps_t)tap;
 @property(nonatomic, weak) NSObject<TapViewControllerDelegate> *delegate;
+@property(nonatomic)       BOOL enabled;
 
 @property(nonatomic) CGFloat currentValue; // 0.0 - 1.0
 
