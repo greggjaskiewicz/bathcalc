@@ -65,6 +65,7 @@
 		27B81281169A0E480055E964 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B81280169A0E480055E964 /* Icon@2x.png */; };
 		27B81285169A11070055E964 /* TemperatureCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81284169A11070055E964 /* TemperatureCalculator.m */; };
 		27B81289169A307F0055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81288169A307F0055E964 /* TapViewController.m */; };
+		27B8128C169A30CD0055E964 /* TapStatusFeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		27B81284169A11070055E964 /* TemperatureCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureCalculator.m; path = "temperature calculations/TemperatureCalculator.m"; sourceTree = "<group>"; };
 		27B81287169A307F0055E964 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapViewController.h; path = tap/TapViewController.h; sourceTree = "<group>"; };
 		27B81288169A307F0055E964 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapViewController.m; path = tap/TapViewController.m; sourceTree = "<group>"; };
+		27B8128A169A30CD0055E964 /* TapStatusFeedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapStatusFeedbackView.h; path = tap/TapStatusFeedbackView.h; sourceTree = "<group>"; };
+		27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapStatusFeedbackView.m; path = tap/TapStatusFeedbackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,8 @@
 			children = (
 				27B81287169A307F0055E964 /* TapViewController.h */,
 				27B81288169A307F0055E964 /* TapViewController.m */,
+				27B8128A169A30CD0055E964 /* TapStatusFeedbackView.h */,
+				27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */,
 			);
 			name = tap;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				27B812691698A9970055E964 /* DialHandLayer.m in Sources */,
 				27B81285169A11070055E964 /* TemperatureCalculator.m in Sources */,
 				27B81289169A307F0055E964 /* TapViewController.m in Sources */,
+				27B8128C169A30CD0055E964 /* TapStatusFeedbackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

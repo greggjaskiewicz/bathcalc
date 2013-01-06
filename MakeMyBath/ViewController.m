@@ -102,8 +102,8 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   
   // warm 20, 322
   // cold 190, 322
-  self.coldTap = [[TapViewController alloc] initWithTapImage:[UIImage imageNamed:@"cold_tap.png"]];
-  self.warmTap = [[TapViewController alloc] initWithTapImage:[UIImage imageNamed:@"hot_tap.png"]];
+  self.coldTap = [[TapViewController alloc] initWithTap:tap_cold];
+  self.warmTap = [[TapViewController alloc] initWithTap:tap_warm];
   
   [self addChildViewController:self.coldTap];
   [self addChildViewController:self.warmTap];

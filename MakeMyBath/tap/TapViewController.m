@@ -7,14 +7,17 @@
 //
 
 #import "TapViewController.h"
+#import "TapStatusFeedbackView.h"
 #import <QuartzCore/QuartzCore.h>
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 @interface TapViewController ()
 
+@property                     enum taps_t tap;
 @property (nonatomic, strong) UIImageView *tapImageView;
 @property (nonatomic, strong) UIImage *tapImage;
+@property (nonatomic, strong) TapStatusFeedbackView *feedbackView;
 @property                     CGPoint lastTapPoint;
 @property (nonatomic)         double currentRotation;
 
@@ -41,13 +44,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)setCurrentValue:(CGFloat)currentValue
 {
   _currentValue = currentValue;
-  
+  self.feedbackView.value = currentValue;
   
   CGFloat deltaRotation = currentValue * 359.9 - _currentRotation;
-  
-  
+    
   [self rotateLayer:self.tapImageView.layer by:deltaRotation];
-
   self.currentRotation = currentValue * 359.9;
 }
 
@@ -55,20 +56,26 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 {
   _currentRotation = currentRotation;
   _currentValue = currentRotation/359.9;
+  self.feedbackView.value = _currentValue;
 }
 
 
-- (id)initWithTapImage:(UIImage*)tapImage
+- (id)initWithTap:(enum taps_t)tap
 {
-  if (!tapImage)
-  {
-    return nil;
-  }
-  
   self = [super initWithNibName:nil bundle:nil];
   if (self)
   {
-    self.tapImage = tapImage;
+    self.tap = tap;
+    switch(tap)
+    {
+      case tap_cold:
+        self.tapImage = [UIImage imageNamed:@"cold_tap.png"];
+        break;
+        
+      default:
+        self.tapImage = [UIImage imageNamed:@"hot_tap.png"];
+        break;
+    }
   }
   
   return self;
@@ -150,7 +157,25 @@ static double wrap(double val, double min, double max)
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.frame = CGRectMake(0, 0, self.tapImage.size.width, self.tapImage.size.height);
+  
+  CGFloat radius = MIN(self.tapImage.size.width, self.tapImage.size.height);
+  
+  radius /= 2.0;
+  
+  CGRect frame = CGRectMake(0, 0, self.tapImage.size.width, self.tapImage.size.height);
+  UIColor *feedbackColour = [UIColor greenColor];
+  
+  if (self.tap == tap_warm)
+  {
+    feedbackColour = [UIColor purpleColor];
+  }
+  
+  self.feedbackView = [[TapStatusFeedbackView alloc] initWithFrame:frame andColour:feedbackColour andRadius:radius];
+
+  [self.view addSubview:self.feedbackView];
+
+  
+  self.view.frame = frame;
   self.tapImageView = [[UIImageView alloc] initWithImage:self.tapImage];
   [self.view addSubview:self.tapImageView];
   
@@ -163,6 +188,7 @@ static double wrap(double val, double min, double max)
   
   [self.view addGestureRecognizer:rotate];
   self.currentRotation = 0.0;
+  
   /*
    double deg = random();
    deg /= (double)RAND_MAX/180.0;

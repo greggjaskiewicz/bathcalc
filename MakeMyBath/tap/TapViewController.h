@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+enum taps_t
+{
+  tap_warm,
+  tap_cold
+};
+
 @class TapViewController;
 
 @protocol TapViewControllerDelegate <NSObject>
@@ -20,7 +26,7 @@
 
 @interface TapViewController : UIViewController
 
-- (id)initWithTapImage:(UIImage*)tapImage;
+- (id)initWithTap:(enum taps_t)tap;
 @property(nonatomic, weak) NSObject<TapViewControllerDelegate> *delegate;
 
 @property(nonatomic) CGFloat currentValue; // 0.0 - 1.0
