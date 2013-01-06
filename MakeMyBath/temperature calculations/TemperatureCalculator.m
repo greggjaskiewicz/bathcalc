@@ -55,7 +55,7 @@
   
   self.mass += sampleMass;
   
-  NSLog(@"sampleTemp: %f, sampleMass: %f, newTemperature:%f", sampleTemperature, sampleMass, self.temperature);
+  //  NSLog(@"sampleTemp: %f, sampleMass: %f, newTemperature:%f", sampleTemperature, sampleMass, self.temperature);
   
   return self.temperature;
 }

@@ -21,6 +21,7 @@ static const CGFloat cold_water_temp = 10.0; // celcius
 
 @property(nonatomic, strong) TapViewController  *coldTap;
 @property(nonatomic, strong) TapViewController  *warmTap;
+@property(nonatomic, strong) UIProgressView     *progress;
 @property(nonatomic, strong) DialViewController *temperatureDial;
 @property(nonatomic)         NSTimeInterval      lastTimeChange;
 @property(nonatomic)         TemperatureCalculator *tCalculator;
@@ -32,6 +33,11 @@ static const CGFloat cold_water_temp = 10.0; // celcius
 
 - (void)updateTemperatureWithColdTap:(CGFloat)coldTap warmTap:(CGFloat)warmTap
 {
+  if (self.tCalculator.mass >= 150)
+  {
+    return;
+  }
+  
   NSTimeInterval tnow  = [[NSDate date] timeIntervalSince1970];
   NSTimeInterval tdiff = tnow - self.lastTimeChange;
   self.lastTimeChange = tnow;
@@ -47,6 +53,8 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   [self.tCalculator updateCalculationWithTemperature:cold_water_temp sampleMass:coldMass];
   
   self.temperatureDial.temperature = self.tCalculator.temperature;
+  
+  self.progress.progress = self.tCalculator.mass/150.0;
 }
 
 - (void)tapViewController:(TapViewController *)tapViewController valueChangedTo:(CGFloat)newValue previousValue:(CGFloat)previousValue
@@ -64,7 +72,7 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   {
     warmTap = previousValue;
   }
-
+  
   [self updateTemperatureWithColdTap:coldTap warmTap:warmTap];
 }
 
@@ -73,22 +81,26 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   double delayInSeconds = 0.15;
   dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
   dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-
+    
     // if you want to make it random, have fun !
-/*
-    CGFloat r = random();
-    r = r/(float)RAND_MAX;
-    r *= 100.0;
-    self.temperatureDial.temperature = r;
-    
-    r = r/100.0;
-    
-    // set taps too !
-    self.coldTap.currentValue = 1-r;
-    self.warmTap.currentValue = r;
-*/
+    /*
+     CGFloat r = random();
+     r = r/(float)RAND_MAX;
+     r *= 100.0;
+     self.temperatureDial.temperature = r;
+     
+     r = r/100.0;
+     
+     // set taps too !
+     self.coldTap.currentValue = 1-r;
+     self.warmTap.currentValue = r;
+     */
     [self updateTemperatureWithColdTap:self.coldTap.currentValue warmTap:self.warmTap.currentValue];
-    [self animateTemp];
+    
+    if (self.tCalculator.mass < 150)
+    {
+      [self animateTemp];
+    }
   });
 }
 
@@ -107,12 +119,13 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   
   [self addChildViewController:self.coldTap];
   [self addChildViewController:self.warmTap];
-  
+
+  self.coldTap.view.frame =  CGRectMake(190, 300, self.coldTap.view.bounds.size.width, self.coldTap.view.bounds.size.height);
+  self.warmTap.view.frame =  CGRectMake(20,  300, self.warmTap.view.bounds.size.width, self.warmTap.view.bounds.size.height);
+
   [self.view addSubview:self.coldTap.view];
   [self.view addSubview:self.warmTap.view];
   
-  self.coldTap.view.frame =  CGRectMake(190, 322, self.coldTap.view.bounds.size.width, self.coldTap.view.bounds.size.height);
-  self.warmTap.view.frame =  CGRectMake(20,  322, self.warmTap.view.bounds.size.width, self.warmTap.view.bounds.size.height);
   
   self.coldTap.delegate = self;
   self.warmTap.delegate = self;
@@ -122,10 +135,16 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   [self.view addSubview:self.temperatureDial.view];
   
   CGRect dialRect = self.temperatureDial.view.bounds;
-  dialRect.origin = CGPointMake(self.view.frame.size.width/2-self.temperatureDial.view.frame.size.width/2, 50);
+  dialRect.origin = CGPointMake(self.view.frame.size.width/2-self.temperatureDial.view.frame.size.width/2, 30);
   self.temperatureDial.view.frame = dialRect;
   
   self.temperatureDial.temperature = 0.0f;
+
+  self.progress = [[UIProgressView alloc] initWithFrame:CGRectMake(30, self.temperatureDial.view.bounds.size.height+30+30, self.view.frame.size.width-30-30, 30)];
+  self.progress.progressViewStyle = UIProgressViewStyleBar;
+  self.progress.progress = 0.0;
+  [self.view addSubview:self.progress];
+
   
   self.tCalculator = [[TemperatureCalculator alloc] init];
   self.lastTimeChange = [[NSDate date] timeIntervalSince1970];

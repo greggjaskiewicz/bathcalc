@@ -163,11 +163,11 @@ static double wrap(double val, double min, double max)
   radius /= 2.0;
   
   CGRect frame = CGRectMake(0, 0, self.tapImage.size.width, self.tapImage.size.height);
-  UIColor *feedbackColour = [UIColor greenColor];
+  UIColor *feedbackColour = [UIColor blueColor];
   
   if (self.tap == tap_warm)
   {
-    feedbackColour = [UIColor purpleColor];
+    feedbackColour = [UIColor redColor];
   }
   
   self.feedbackView = [[TapStatusFeedbackView alloc] initWithFrame:frame andColour:feedbackColour andRadius:radius];
