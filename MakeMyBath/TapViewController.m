@@ -85,6 +85,7 @@ static double wrap(double val, double min, double max)
 
 - (void)rotateTapFromPoint:(CGPoint)p1 toPoint:(CGPoint)p2
 {
+  CGFloat previousValue = self.currentValue;
   CGPoint center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
   
   double fromAngle = atan2(p1.y-center.y, p1.x-center.x);
@@ -109,9 +110,9 @@ static double wrap(double val, double min, double max)
     self.currentRotation += deltaAngle;
     [self rotateLayer:self.tapImageView.layer by:deltaAngle];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(tapViewController:valueChangedTo:)])
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapViewController:valueChangedTo:previousValue:)])
     {
-      [self.delegate tapViewController:self valueChangedTo:self.currentValue];
+      [self.delegate tapViewController:self valueChangedTo:self.currentValue previousValue:previousValue];
     }
   }
 }

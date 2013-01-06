@@ -17,6 +17,7 @@
 
 @end
 
+
 @implementation DialViewController
 
 - (void)setDigitTemperature
@@ -24,7 +25,7 @@
   CGFloat div = 100;
   for(UILabel *l in self.digits)
   {
-    CGFloat dig = self.temperature/div;
+    CGFloat dig = roundf(self.temperature)/div;
     dig = fmodf(dig, 10.0f);
     l.text = [NSString stringWithFormat:@"%d",(int)dig];
     div = div/10;
@@ -33,7 +34,7 @@
 
 - (void)setTemperature:(CGFloat)temperature
 {
-  self.dialHand.angle = (temperature/100.0)*180.0;
+  self.dialHand.angle = (roundf(temperature)/100.0)*180.0;
   _temperature = temperature;
   [self setDigitTemperature];
 }

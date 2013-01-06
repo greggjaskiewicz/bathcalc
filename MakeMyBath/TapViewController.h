@@ -14,7 +14,7 @@
 
 @optional
 
-- (void)tapViewController:(TapViewController*)tapViewController valueChangedTo:(CGFloat)newValue;
+- (void)tapViewController:(TapViewController*)tapViewController valueChangedTo:(CGFloat)newValue previousValue:(CGFloat)previousValue;
 
 @end
 
