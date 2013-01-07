@@ -11,6 +11,11 @@
 #import "DialViewController.h"
 #import "TemperatureCalculator.h"
 
+
+/// Enable to get some automatic show
+/// disable for manual control
+//#define RANDOM_MODE
+
 static const CGFloat warm_water_flow = 10.0; // litre per minute
 static const CGFloat cold_water_flow = 12.0; // litre per minute
 static const CGFloat warm_water_temp = 60.0; // celcius , not mentioned in the document - but here's my assumption
@@ -55,6 +60,9 @@ static const CGFloat cold_water_temp = 10.0; // celcius
   {
     self.coldTap.enabled = NO;
     self.warmTap.enabled = NO;
+    
+    self.coldTap.currentValue = 0.0;
+    self.warmTap.currentValue = 0.0;
     return;
   }
 }
@@ -80,7 +88,11 @@ static const CGFloat cold_water_temp = 10.0; // celcius
 
 - (void)animateTemp
 {
+#ifdef RANDOM_MODE
+  double delayInSeconds = 0.45;
+#else
   double delayInSeconds = 0.15;
+#endif
   dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
   dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
     
@@ -89,10 +101,6 @@ static const CGFloat cold_water_temp = 10.0; // celcius
     
     CGFloat r = random();
     r = r/(float)RAND_MAX;
-    r *= 100.0;
-    //     self.temperatureDial.temperature = r;
-    
-    r = r/100.0;
     
     // set taps too !
     self.coldTap.currentValue = 1-r;

@@ -43,8 +43,8 @@
 {
   CGContextRef context = UIGraphicsGetCurrentContext();
   
-  CGColorRef arcColour = CGColorCreateCopyWithAlpha(self.colour.CGColor, 0.7);
-  CGColorRef ovrColour = CGColorCreateCopyWithAlpha(self.colour.CGColor, 0.9);
+  CGColorRef arcColour = CGColorCreateCopyWithAlpha(self.colour.CGColor, 0.4);
+  CGColorRef ovrColour = CGColorCreateCopyWithAlpha(self.colour.CGColor, 0.6);
   
   CGContextSetStrokeColorWithColor(context, ovrColour);
   CGContextSetFillColorWithColor  (context, arcColour);

@@ -45,6 +45,7 @@
   // not enough to make calculation, so just don't
   if (sampleMass < FLT_EPSILON)
   {
+    //    NSLog(@"don't!");
     return self.temperature;
   }
   
