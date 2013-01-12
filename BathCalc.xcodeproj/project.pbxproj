@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2767485D169DD72800BD9472 /* DialTemperatureEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2767485C169DD72800BD9472 /* DialTemperatureEntryViewController.m */; };
+		2767486016A1B3D600BD9472 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767485E16A1B3D500BD9472 /* DoneDown.png */; };
+		2767486116A1B3D600BD9472 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767485F16A1B3D500BD9472 /* DoneUp.png */; };
+		2767486416A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2767486216A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp */; };
+		2767486916A21D7600BD9472 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2767486716A21D7600BD9472 /* SettingsViewController.m */; };
+		2767486A16A21D7600BD9472 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767486816A21D7600BD9472 /* SettingsViewController.xib */; };
+		2767486D16A2210100BD9472 /* settings_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767486B16A2210000BD9472 /* settings_background.png */; };
+		2767486E16A2210100BD9472 /* settings_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767486C16A2210000BD9472 /* settings_background@2x.png */; };
 		27B811F016961D890055E964 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811EF16961D890055E964 /* UIKit.framework */; };
 		27B811F216961D890055E964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F116961D890055E964 /* Foundation.framework */; };
 		27B811F416961D890055E964 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F316961D890055E964 /* CoreGraphics.framework */; };
@@ -18,39 +26,14 @@
 		27B8120616961D890055E964 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120516961D890055E964 /* Default-568h@2x.png */; };
 		27B8120916961D890055E964 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8120816961D890055E964 /* ViewController.m */; };
 		27B8120C16961D890055E964 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120A16961D890055E964 /* ViewController.xib */; };
-		27B8121416961D890055E964 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B8121316961D890055E964 /* SenTestingKit.framework */; };
-		27B8121516961D890055E964 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811EF16961D890055E964 /* UIKit.framework */; };
-		27B8121616961D890055E964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F116961D890055E964 /* Foundation.framework */; };
-		27B8121E16961D890055E964 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B8121C16961D890055E964 /* InfoPlist.strings */; };
-		27B8122116961D890055E964 /* MakeMyBathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8122016961D890055E964 /* MakeMyBathTests.m */; };
 		27B812321696207B0055E964 /* cold_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122B1696207B0055E964 /* cold_tap.png */; };
-		27B812331696207B0055E964 /* cold_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122B1696207B0055E964 /* cold_tap.png */; };
 		27B812341696207B0055E964 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122C1696207B0055E964 /* dial.png */; };
-		27B812351696207B0055E964 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122C1696207B0055E964 /* dial.png */; };
 		27B812361696207B0055E964 /* hot_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122D1696207B0055E964 /* hot_tap.png */; };
-		27B812371696207B0055E964 /* hot_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122D1696207B0055E964 /* hot_tap.png */; };
 		27B812381696207B0055E964 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122E1696207B0055E964 /* tile.png */; };
-		27B812391696207B0055E964 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122E1696207B0055E964 /* tile.png */; };
-		27B8123A1696207B0055E964 /* water_level_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122F1696207B0055E964 /* water_level_background.png */; };
-		27B8123B1696207B0055E964 /* water_level_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122F1696207B0055E964 /* water_level_background.png */; };
-		27B8123C1696207B0055E964 /* water_level_markings.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812301696207B0055E964 /* water_level_markings.png */; };
-		27B8123D1696207B0055E964 /* water_level_markings.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812301696207B0055E964 /* water_level_markings.png */; };
-		27B8123E1696207B0055E964 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812311696207B0055E964 /* water.png */; };
-		27B8123F1696207B0055E964 /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812311696207B0055E964 /* water.png */; };
 		27B812471696215B0055E964 /* cold_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812401696215B0055E964 /* cold_tap@2x.png */; };
-		27B812481696215B0055E964 /* cold_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812401696215B0055E964 /* cold_tap@2x.png */; };
 		27B812491696215B0055E964 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812411696215B0055E964 /* dial@2x.png */; };
-		27B8124A1696215B0055E964 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812411696215B0055E964 /* dial@2x.png */; };
 		27B8124B1696215B0055E964 /* hot_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812421696215B0055E964 /* hot_tap@2x.png */; };
-		27B8124C1696215B0055E964 /* hot_tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812421696215B0055E964 /* hot_tap@2x.png */; };
 		27B8124D1696215B0055E964 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812431696215B0055E964 /* tile@2x.png */; };
-		27B8124E1696215B0055E964 /* tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812431696215B0055E964 /* tile@2x.png */; };
-		27B8124F1696215B0055E964 /* water_level_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812441696215B0055E964 /* water_level_background@2x.png */; };
-		27B812501696215B0055E964 /* water_level_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812441696215B0055E964 /* water_level_background@2x.png */; };
-		27B812511696215B0055E964 /* water_level_markings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812451696215B0055E964 /* water_level_markings@2x.png */; };
-		27B812521696215B0055E964 /* water_level_markings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812451696215B0055E964 /* water_level_markings@2x.png */; };
-		27B812531696215B0055E964 /* water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812461696215B0055E964 /* water@2x.png */; };
-		27B812541696215B0055E964 /* water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B812461696215B0055E964 /* water@2x.png */; };
 		27B81256169628FB0055E964 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B81255169628FA0055E964 /* QuartzCore.framework */; };
 		27B8126116988EBD0055E964 /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126016988EBD0055E964 /* DialViewController.m */; };
 		27B8126416988F210055E964 /* DialHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8126316988F210055E964 /* DialHand.m */; };
@@ -63,30 +46,31 @@
 		27B8127A169A0E070055E964 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B81270169A0E030055E964 /* Icon-Small@2x.png */; };
 		27B8127F169A0E380055E964 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8127E169A0E380055E964 /* Icon.png */; };
 		27B81281169A0E480055E964 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B81280169A0E480055E964 /* Icon@2x.png */; };
-		27B81285169A11070055E964 /* TemperatureCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81284169A11070055E964 /* TemperatureCalculator.m */; };
+		27B81285169A11070055E964 /* TemperatureCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27B81284169A11070055E964 /* TemperatureCalculator.mm */; };
 		27B81289169A307F0055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81288169A307F0055E964 /* TapViewController.m */; };
 		27B8128C169A30CD0055E964 /* TapStatusFeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		27B8121716961D890055E964 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27B811E416961D890055E964 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 27B811EB16961D890055E964;
-			remoteInfo = MakeMyBath;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		27B811EC16961D890055E964 /* MakeMyBath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeMyBath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2767485B169DD72800BD9472 /* DialTemperatureEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialTemperatureEntryViewController.h; path = dial/DialTemperatureEntryViewController.h; sourceTree = "<group>"; };
+		2767485C169DD72800BD9472 /* DialTemperatureEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialTemperatureEntryViewController.m; path = dial/DialTemperatureEntryViewController.m; sourceTree = "<group>"; };
+		2767485E16A1B3D500BD9472 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneDown.png; path = resources/DoneDown.png; sourceTree = "<group>"; };
+		2767485F16A1B3D500BD9472 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneUp.png; path = resources/DoneUp.png; sourceTree = "<group>"; };
+		2767486216A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TempAndValueTableCalculation.cpp; path = "temperature calculations/TempAndValueTableCalculation.cpp"; sourceTree = "<group>"; };
+		2767486316A1FE7A00BD9472 /* TempAndValueTableCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempAndValueTableCalculation.h; path = "temperature calculations/TempAndValueTableCalculation.h"; sourceTree = "<group>"; };
+		2767486616A21D7600BD9472 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = settings/SettingsViewController.h; sourceTree = "<group>"; };
+		2767486716A21D7600BD9472 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = settings/SettingsViewController.m; sourceTree = "<group>"; };
+		2767486816A21D7600BD9472 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = settings/SettingsViewController.xib; sourceTree = "<group>"; };
+		2767486B16A2210000BD9472 /* settings_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_background.png; path = resources/settings_background.png; sourceTree = "<group>"; };
+		2767486C16A2210000BD9472 /* settings_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_background@2x.png"; path = "resources/settings_background@2x.png"; sourceTree = "<group>"; };
+		27B811EC16961D890055E964 /* BathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B811EF16961D890055E964 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27B811F116961D890055E964 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27B811F316961D890055E964 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		27B811F716961D890055E964 /* MakeMyBath-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakeMyBath-Info.plist"; sourceTree = "<group>"; };
+		27B811F716961D890055E964 /* BathCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BathCalc-Info.plist"; sourceTree = "<group>"; };
 		27B811F916961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27B811FB16961D890055E964 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27B811FD16961D890055E964 /* MakeMyBath-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MakeMyBath-Prefix.pch"; sourceTree = "<group>"; };
+		27B811FD16961D890055E964 /* BathCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BathCalc-Prefix.pch"; sourceTree = "<group>"; };
 		27B811FE16961D890055E964 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27B811FF16961D890055E964 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		27B8120116961D890055E964 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -95,7 +79,6 @@
 		27B8120716961D890055E964 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		27B8120816961D890055E964 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27B8120B16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		27B8121216961D890055E964 /* MakeMyBathTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeMyBathTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B8121316961D890055E964 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		27B8121B16961D890055E964 /* MakeMyBathTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakeMyBathTests-Info.plist"; sourceTree = "<group>"; };
 		27B8121D16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -105,16 +88,10 @@
 		27B8122C1696207B0055E964 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = resources/dial.png; sourceTree = "<group>"; };
 		27B8122D1696207B0055E964 /* hot_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hot_tap.png; path = resources/hot_tap.png; sourceTree = "<group>"; };
 		27B8122E1696207B0055E964 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = resources/tile.png; sourceTree = "<group>"; };
-		27B8122F1696207B0055E964 /* water_level_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water_level_background.png; path = resources/water_level_background.png; sourceTree = "<group>"; };
-		27B812301696207B0055E964 /* water_level_markings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water_level_markings.png; path = resources/water_level_markings.png; sourceTree = "<group>"; };
-		27B812311696207B0055E964 /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water.png; path = resources/water.png; sourceTree = "<group>"; };
 		27B812401696215B0055E964 /* cold_tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cold_tap@2x.png"; path = "resources/cold_tap@2x.png"; sourceTree = "<group>"; };
 		27B812411696215B0055E964 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "resources/dial@2x.png"; sourceTree = "<group>"; };
 		27B812421696215B0055E964 /* hot_tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hot_tap@2x.png"; path = "resources/hot_tap@2x.png"; sourceTree = "<group>"; };
 		27B812431696215B0055E964 /* tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile@2x.png"; path = "resources/tile@2x.png"; sourceTree = "<group>"; };
-		27B812441696215B0055E964 /* water_level_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water_level_background@2x.png"; path = "resources/water_level_background@2x.png"; sourceTree = "<group>"; };
-		27B812451696215B0055E964 /* water_level_markings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water_level_markings@2x.png"; path = "resources/water_level_markings@2x.png"; sourceTree = "<group>"; };
-		27B812461696215B0055E964 /* water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "water@2x.png"; path = "resources/water@2x.png"; sourceTree = "<group>"; };
 		27B81255169628FA0055E964 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		27B8125F16988EBD0055E964 /* DialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialViewController.h; path = dial/DialViewController.h; sourceTree = "<group>"; };
 		27B8126016988EBD0055E964 /* DialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialViewController.m; path = dial/DialViewController.m; sourceTree = "<group>"; };
@@ -131,7 +108,7 @@
 		27B8127E169A0E380055E964 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		27B81280169A0E480055E964 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		27B81283169A11070055E964 /* TemperatureCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureCalculator.h; path = "temperature calculations/TemperatureCalculator.h"; sourceTree = "<group>"; };
-		27B81284169A11070055E964 /* TemperatureCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureCalculator.m; path = "temperature calculations/TemperatureCalculator.m"; sourceTree = "<group>"; };
+		27B81284169A11070055E964 /* TemperatureCalculator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TemperatureCalculator.mm; path = "temperature calculations/TemperatureCalculator.mm"; sourceTree = "<group>"; };
 		27B81287169A307F0055E964 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapViewController.h; path = tap/TapViewController.h; sourceTree = "<group>"; };
 		27B81288169A307F0055E964 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapViewController.m; path = tap/TapViewController.m; sourceTree = "<group>"; };
 		27B8128A169A30CD0055E964 /* TapStatusFeedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapStatusFeedbackView.h; path = tap/TapStatusFeedbackView.h; sourceTree = "<group>"; };
@@ -150,23 +127,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27B8120E16961D890055E964 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B8121416961D890055E964 /* SenTestingKit.framework in Frameworks */,
-				27B8121516961D890055E964 /* UIKit.framework in Frameworks */,
-				27B8121616961D890055E964 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2767486516A21D1E00BD9472 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				2767486616A21D7600BD9472 /* SettingsViewController.h */,
+				2767486716A21D7600BD9472 /* SettingsViewController.m */,
+				2767486816A21D7600BD9472 /* SettingsViewController.xib */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
 		27B811E316961D890055E964 = {
 			isa = PBXGroup;
 			children = (
-				27B811F516961D890055E964 /* MakeMyBath */,
+				27B811F516961D890055E964 /* BathCalc */,
 				27B8121916961D890055E964 /* MakeMyBathTests */,
 				27B811EE16961D890055E964 /* Frameworks */,
 				27B811ED16961D890055E964 /* Products */,
@@ -176,8 +153,7 @@
 		27B811ED16961D890055E964 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27B811EC16961D890055E964 /* MakeMyBath.app */,
-				27B8121216961D890055E964 /* MakeMyBathTests.octest */,
+				27B811EC16961D890055E964 /* BathCalc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +170,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		27B811F516961D890055E964 /* MakeMyBath */ = {
+		27B811F516961D890055E964 /* BathCalc */ = {
 			isa = PBXGroup;
 			children = (
+				2767486516A21D1E00BD9472 /* settings */,
 				27B81286169A30610055E964 /* tap */,
 				27B81282169A10DE0055E964 /* temperature calculations */,
 				27B8125E16988E900055E964 /* dial */,
@@ -208,16 +185,17 @@
 				27B8120A16961D890055E964 /* ViewController.xib */,
 				27B811F616961D890055E964 /* Supporting Files */,
 			);
+			name = BathCalc;
 			path = MakeMyBath;
 			sourceTree = "<group>";
 		};
 		27B811F616961D890055E964 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				27B811F716961D890055E964 /* MakeMyBath-Info.plist */,
+				27B811F716961D890055E964 /* BathCalc-Info.plist */,
 				27B811F816961D890055E964 /* InfoPlist.strings */,
 				27B811FB16961D890055E964 /* main.m */,
-				27B811FD16961D890055E964 /* MakeMyBath-Prefix.pch */,
+				27B811FD16961D890055E964 /* BathCalc-Prefix.pch */,
 				27B8120116961D890055E964 /* Default.png */,
 				27B8120316961D890055E964 /* Default@2x.png */,
 				27B8120516961D890055E964 /* Default-568h@2x.png */,
@@ -247,6 +225,10 @@
 		27B8122A1696205A0055E964 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2767486B16A2210000BD9472 /* settings_background.png */,
+				2767486C16A2210000BD9472 /* settings_background@2x.png */,
+				2767485E16A1B3D500BD9472 /* DoneDown.png */,
+				2767485F16A1B3D500BD9472 /* DoneUp.png */,
 				27B81280169A0E480055E964 /* Icon@2x.png */,
 				27B8127E169A0E380055E964 /* Icon.png */,
 				27B8126B169A0DFF0055E964 /* Icon-72.png */,
@@ -263,12 +245,6 @@
 				27B8122D1696207B0055E964 /* hot_tap.png */,
 				27B812431696215B0055E964 /* tile@2x.png */,
 				27B8122E1696207B0055E964 /* tile.png */,
-				27B812441696215B0055E964 /* water_level_background@2x.png */,
-				27B8122F1696207B0055E964 /* water_level_background.png */,
-				27B812451696215B0055E964 /* water_level_markings@2x.png */,
-				27B812301696207B0055E964 /* water_level_markings.png */,
-				27B812461696215B0055E964 /* water@2x.png */,
-				27B812311696207B0055E964 /* water.png */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -282,6 +258,8 @@
 				27B8126316988F210055E964 /* DialHand.m */,
 				27B812671698A9960055E964 /* DialHandLayer.h */,
 				27B812681698A9970055E964 /* DialHandLayer.m */,
+				2767485B169DD72800BD9472 /* DialTemperatureEntryViewController.h */,
+				2767485C169DD72800BD9472 /* DialTemperatureEntryViewController.m */,
 			);
 			name = dial;
 			sourceTree = "<group>";
@@ -290,7 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				27B81283169A11070055E964 /* TemperatureCalculator.h */,
-				27B81284169A11070055E964 /* TemperatureCalculator.m */,
+				27B81284169A11070055E964 /* TemperatureCalculator.mm */,
+				2767486216A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp */,
+				2767486316A1FE7A00BD9472 /* TempAndValueTableCalculation.h */,
 			);
 			name = "temperature calculations";
 			sourceTree = "<group>";
@@ -309,9 +289,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27B811EB16961D890055E964 /* MakeMyBath */ = {
+		27B811EB16961D890055E964 /* BathCalc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27B8122416961D890055E964 /* Build configuration list for PBXNativeTarget "MakeMyBath" */;
+			buildConfigurationList = 27B8122416961D890055E964 /* Build configuration list for PBXNativeTarget "BathCalc" */;
 			buildPhases = (
 				27B811E816961D890055E964 /* Sources */,
 				27B811E916961D890055E964 /* Frameworks */,
@@ -321,29 +301,10 @@
 			);
 			dependencies = (
 			);
-			name = MakeMyBath;
+			name = BathCalc;
 			productName = MakeMyBath;
-			productReference = 27B811EC16961D890055E964 /* MakeMyBath.app */;
+			productReference = 27B811EC16961D890055E964 /* BathCalc.app */;
 			productType = "com.apple.product-type.application";
-		};
-		27B8121116961D890055E964 /* MakeMyBathTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27B8122716961D890055E964 /* Build configuration list for PBXNativeTarget "MakeMyBathTests" */;
-			buildPhases = (
-				27B8120D16961D890055E964 /* Sources */,
-				27B8120E16961D890055E964 /* Frameworks */,
-				27B8120F16961D890055E964 /* Resources */,
-				27B8121016961D890055E964 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27B8121816961D890055E964 /* PBXTargetDependency */,
-			);
-			name = MakeMyBathTests;
-			productName = MakeMyBathTests;
-			productReference = 27B8121216961D890055E964 /* MakeMyBathTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -354,7 +315,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Greg Jaskiewicz";
 			};
-			buildConfigurationList = 27B811E716961D890055E964 /* Build configuration list for PBXProject "MakeMyBath" */;
+			buildConfigurationList = 27B811E716961D890055E964 /* Build configuration list for PBXProject "BathCalc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -366,8 +327,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27B811EB16961D890055E964 /* MakeMyBath */,
-				27B8121116961D890055E964 /* MakeMyBathTests */,
+				27B811EB16961D890055E964 /* BathCalc */,
 			);
 		};
 /* End PBXProject section */
@@ -386,16 +346,10 @@
 				27B812341696207B0055E964 /* dial.png in Resources */,
 				27B812361696207B0055E964 /* hot_tap.png in Resources */,
 				27B812381696207B0055E964 /* tile.png in Resources */,
-				27B8123A1696207B0055E964 /* water_level_background.png in Resources */,
-				27B8123C1696207B0055E964 /* water_level_markings.png in Resources */,
-				27B8123E1696207B0055E964 /* water.png in Resources */,
 				27B812471696215B0055E964 /* cold_tap@2x.png in Resources */,
 				27B812491696215B0055E964 /* dial@2x.png in Resources */,
 				27B8124B1696215B0055E964 /* hot_tap@2x.png in Resources */,
 				27B8124D1696215B0055E964 /* tile@2x.png in Resources */,
-				27B8124F1696215B0055E964 /* water_level_background@2x.png in Resources */,
-				27B812511696215B0055E964 /* water_level_markings@2x.png in Resources */,
-				27B812531696215B0055E964 /* water@2x.png in Resources */,
 				27B81275169A0E070055E964 /* Icon-72.png in Resources */,
 				27B81276169A0E070055E964 /* Icon-72@2x.png in Resources */,
 				27B81277169A0E070055E964 /* Icon-Small-50.png in Resources */,
@@ -404,48 +358,15 @@
 				27B8127A169A0E070055E964 /* Icon-Small@2x.png in Resources */,
 				27B8127F169A0E380055E964 /* Icon.png in Resources */,
 				27B81281169A0E480055E964 /* Icon@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B8120F16961D890055E964 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B8121E16961D890055E964 /* InfoPlist.strings in Resources */,
-				27B812331696207B0055E964 /* cold_tap.png in Resources */,
-				27B812351696207B0055E964 /* dial.png in Resources */,
-				27B812371696207B0055E964 /* hot_tap.png in Resources */,
-				27B812391696207B0055E964 /* tile.png in Resources */,
-				27B8123B1696207B0055E964 /* water_level_background.png in Resources */,
-				27B8123D1696207B0055E964 /* water_level_markings.png in Resources */,
-				27B8123F1696207B0055E964 /* water.png in Resources */,
-				27B812481696215B0055E964 /* cold_tap@2x.png in Resources */,
-				27B8124A1696215B0055E964 /* dial@2x.png in Resources */,
-				27B8124C1696215B0055E964 /* hot_tap@2x.png in Resources */,
-				27B8124E1696215B0055E964 /* tile@2x.png in Resources */,
-				27B812501696215B0055E964 /* water_level_background@2x.png in Resources */,
-				27B812521696215B0055E964 /* water_level_markings@2x.png in Resources */,
-				27B812541696215B0055E964 /* water@2x.png in Resources */,
+				2767486016A1B3D600BD9472 /* DoneDown.png in Resources */,
+				2767486116A1B3D600BD9472 /* DoneUp.png in Resources */,
+				2767486A16A21D7600BD9472 /* SettingsViewController.xib in Resources */,
+				2767486D16A2210100BD9472 /* settings_background.png in Resources */,
+				2767486E16A2210100BD9472 /* settings_background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		27B8121016961D890055E964 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27B811E816961D890055E964 /* Sources */ = {
@@ -458,29 +379,16 @@
 				27B8126116988EBD0055E964 /* DialViewController.m in Sources */,
 				27B8126416988F210055E964 /* DialHand.m in Sources */,
 				27B812691698A9970055E964 /* DialHandLayer.m in Sources */,
-				27B81285169A11070055E964 /* TemperatureCalculator.m in Sources */,
+				27B81285169A11070055E964 /* TemperatureCalculator.mm in Sources */,
 				27B81289169A307F0055E964 /* TapViewController.m in Sources */,
 				27B8128C169A30CD0055E964 /* TapStatusFeedbackView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B8120D16961D890055E964 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B8122116961D890055E964 /* MakeMyBathTests.m in Sources */,
+				2767485D169DD72800BD9472 /* DialTemperatureEntryViewController.m in Sources */,
+				2767486416A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp in Sources */,
+				2767486916A21D7600BD9472 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		27B8121816961D890055E964 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 27B811EB16961D890055E964 /* MakeMyBath */;
-			targetProxy = 27B8121716961D890055E964 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27B811F816961D890055E964 /* InfoPlist.strings */ = {
@@ -570,10 +478,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
-				INFOPLIST_FILE = "MakeMyBath/MakeMyBath-Info.plist";
+				GCC_PREFIX_HEADER = "MakeMyBath/BathCalc-Prefix.pch";
+				INFOPLIST_FILE = "MakeMyBath/BathCalc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BathCalc;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -582,52 +490,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
-				INFOPLIST_FILE = "MakeMyBath/MakeMyBath-Info.plist";
+				GCC_PREFIX_HEADER = "MakeMyBath/BathCalc-Prefix.pch";
+				INFOPLIST_FILE = "MakeMyBath/BathCalc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BathCalc;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		27B8122816961D890055E964 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MakeMyBath.app/MakeMyBath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
-				INFOPLIST_FILE = "MakeMyBathTests/MakeMyBathTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		27B8122916961D890055E964 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MakeMyBath.app/MakeMyBath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MakeMyBath/MakeMyBath-Prefix.pch";
-				INFOPLIST_FILE = "MakeMyBathTests/MakeMyBathTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27B811E716961D890055E964 /* Build configuration list for PBXProject "MakeMyBath" */ = {
+		27B811E716961D890055E964 /* Build configuration list for PBXProject "BathCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27B8122216961D890055E964 /* Debug */,
@@ -636,20 +510,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27B8122416961D890055E964 /* Build configuration list for PBXNativeTarget "MakeMyBath" */ = {
+		27B8122416961D890055E964 /* Build configuration list for PBXNativeTarget "BathCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27B8122516961D890055E964 /* Debug */,
 				27B8122616961D890055E964 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27B8122716961D890055E964 /* Build configuration list for PBXNativeTarget "MakeMyBathTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27B8122816961D890055E964 /* Debug */,
-				27B8122916961D890055E964 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

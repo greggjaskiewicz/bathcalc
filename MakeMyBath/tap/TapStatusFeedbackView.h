@@ -1,6 +1,6 @@
 //
 //  TapStatusFeedbackView.h
-//  MakeMyBath
+//  BathCalc
 //
 //  Created by Greg Jaskiewicz on 06/01/2013.
 //  Copyright (c) 2013 Greg Jaskiewicz. All rights reserved.

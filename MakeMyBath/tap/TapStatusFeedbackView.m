@@ -1,6 +1,6 @@
 //
 //  TapStatusFeedbackView.m
-//  MakeMyBath
+//  BathCalc
 //
 //  Created by Greg Jaskiewicz on 06/01/2013.
 //  Copyright (c) 2013 Greg Jaskiewicz. All rights reserved.
@@ -54,7 +54,7 @@
   CGContextBeginPath(context);
 
   CGContextMoveToPoint(context,    self.frame.size.width/2, self.frame.size.height/2);
-  CGContextAddArc(context, self.frame.size.width/2, self.frame.size.height/2, self.radius, angle, -FLT_EPSILON, 1);
+  CGContextAddArc(context,         self.frame.size.width/2, self.frame.size.height/2, self.radius, angle, -FLT_EPSILON, 1);
   CGContextMoveToPoint(context,    self.frame.size.width/2, self.frame.size.height/2);
 
   CGContextFillPath(context);

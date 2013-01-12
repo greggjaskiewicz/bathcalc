@@ -1,6 +1,6 @@
 //
 //  TapViewController.m
-//  MakeMyBath
+//  BathCalc
 //
 //  Created by Greg Jaskiewicz on 03/01/2013.
 //  Copyright (c) 2013 Greg Jaskiewicz. All rights reserved.
@@ -24,6 +24,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 @end
 
 @implementation TapViewController
+
+- (void)setEnabled:(BOOL)enabled
+{
+  [UIView animateWithDuration:0.3 animations:^{
+    self.tapImageView.alpha = enabled ? 1 : 0.3;
+  }];
+  
+  _enabled = enabled;
+}
 
 -(void)setAnchorPointInTheMiddleForView:(UIView *)view
 {
@@ -157,10 +166,17 @@ static double wrap(double val, double min, double max)
   }
 }
 
-
 - (void) rotation:(UIRotationGestureRecognizer *) sender
 {
   [self rotateLayer:self.tapImageView.layer by:sender.rotation];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+
+  CGRect frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.tapImage.size.width, self.tapImage.size.height);
+  self.view.frame = frame;
 }
 
 - (void)viewDidLoad
@@ -188,7 +204,7 @@ static double wrap(double val, double min, double max)
   self.tapImageView = [[UIImageView alloc] initWithImage:self.tapImage];
   [self.view addSubview:self.tapImageView];
   
-  self.tapImageView.center = self.view.center;
+  self.tapImageView.frame = self.view.frame;
   
   [self setAnchorPointInTheMiddleForView:self.tapImageView];
   
