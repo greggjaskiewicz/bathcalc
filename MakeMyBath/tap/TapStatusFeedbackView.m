@@ -58,6 +58,9 @@
   CGContextMoveToPoint(context,    self.frame.size.width/2, self.frame.size.height/2);
 
   CGContextFillPath(context);
+  
+  CFRelease(arcColour);
+  CFRelease(ovrColour);
 }
 
 @end
