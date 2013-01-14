@@ -33,8 +33,10 @@
     else
     {
       _coldTemp = 10.0f; // default
-      [[NSUserDefaults standardUserDefaults] setFloat:_coldTemp forKey:@"coldTemp"];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [[NSUserDefaults standardUserDefaults] setFloat:_coldTemp forKey:@"coldTemp"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+      });
     }
   }
   
@@ -52,8 +54,10 @@
     else
     {
       _warmTemp = 60.0f; // default
-      [[NSUserDefaults standardUserDefaults] setFloat:_warmTemp forKey:@"warmTemp"];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [[NSUserDefaults standardUserDefaults] setFloat:_warmTemp forKey:@"warmTemp"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+      });
     }
   }
   
@@ -72,8 +76,10 @@
     else
     {
       _coldFlow = 12.0f; // default
-      [[NSUserDefaults standardUserDefaults] setFloat:_coldFlow forKey:@"coldFlow"];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [[NSUserDefaults standardUserDefaults] setFloat:_coldFlow forKey:@"coldFlow"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+      });
     }
   }
   
@@ -91,8 +97,11 @@
     else
     {
       _warmFlow = 10.0f; // default
-      [[NSUserDefaults standardUserDefaults] setFloat:_warmFlow forKey:@"warmFlow"];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        [[NSUserDefaults standardUserDefaults] setFloat:_warmFlow forKey:@"warmFlow"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+      });
     }
   }
   
@@ -104,10 +113,12 @@
   if (_warmFlow != warmFlow)
   {
     _warmFlow = warmFlow;
-    [[NSUserDefaults standardUserDefaults] setFloat:warmFlow forKey:@"warmFlow"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+      
+      [[NSUserDefaults standardUserDefaults] setFloat:warmFlow forKey:@"warmFlow"];
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    });
   }
 }
 
@@ -117,10 +128,12 @@
   if (warmTemp != _warmTemp)
   {
     _warmTemp = warmTemp;
-    [[NSUserDefaults standardUserDefaults] setFloat:warmTemp forKey:@"warmTemp"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+      
+      [[NSUserDefaults standardUserDefaults] setFloat:warmTemp forKey:@"warmTemp"];
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    });
   }
 }
 
@@ -130,10 +143,12 @@
   {
     
     _coldFlow = coldFlow;
-    [[NSUserDefaults standardUserDefaults] setFloat:coldFlow forKey:@"coldFlow"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+      
+      [[NSUserDefaults standardUserDefaults] setFloat:coldFlow forKey:@"coldFlow"];
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    });
   }
 }
 
@@ -142,10 +157,13 @@
   if (coldTemp != _coldTemp)
   {
     _coldTemp = coldTemp;
-    [[NSUserDefaults standardUserDefaults] setFloat:coldTemp forKey:@"coldTemp"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+      
+      [[NSUserDefaults standardUserDefaults] setFloat:coldTemp forKey:@"coldTemp"];
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      
+      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    });
   }
 }
 
@@ -160,7 +178,7 @@
     _coldFlow = -1;
     _warmFlow = -1;
     _warmTemp = -1;
-
+    
     [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
   }
   

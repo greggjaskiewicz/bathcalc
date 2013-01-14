@@ -162,6 +162,7 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
 
 - (IBAction)done:(UIButton*)foo
 {
+  [self tapped:nil];
   self.busyView.hidden = NO;
 
   self.warmTapFlow.enabled = NO;

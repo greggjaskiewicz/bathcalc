@@ -41,7 +41,9 @@
   [self.tCalculator updateCalculationWithTemperature:self.tCalculator.coldTemp sampleMass:self.tCalculator.coldFlow * coldTap];
   
   self.temperatureDial.temperature = self.tCalculator.temperature;
+#ifdef _DEBUG_
   NSLog(@"Temperature %f", self.tCalculator.temperature);
+#endif
 }
 
 - (void)tapViewController:(TapViewController *)tapViewController valueChangedTo:(CGFloat)newValue previousValue:(CGFloat)previousValue

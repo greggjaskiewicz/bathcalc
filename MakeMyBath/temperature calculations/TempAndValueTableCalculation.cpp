@@ -89,7 +89,11 @@ temps_settings_t precalcualte_table_for(double flowx, double flowy, double tempx
     double temp = tempx.first;
     xys_t xys = tempx.second;
     xy_t best = pick_best(xys);
+
+#ifdef _DEBUG_
     std::cout << "for temp:" << temp << " found " << xys.size() << " entries, best x:" << best.x << ", y: " << best.y << std::endl;
+#endif
+    
     best_settings[temp] = best;
   }
   
