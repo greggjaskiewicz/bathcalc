@@ -193,8 +193,8 @@
   }
   
   //  ((Va * Ta) + (Vb * Tb)) / (Va+Vb) = Tf , because both are water and their heat constants are the same
-  CGFloat t = (sampleMass*sampleTemperature + self.mass*self.temperature);
-  CGFloat l = (sampleMass + self.mass);
+  CGFloat t = (sampleMass*sampleTemperature) + (self.mass*self.temperature);
+  CGFloat l = sampleMass + self.mass;
   self.temperature = t / l;
   
   self.mass += sampleMass;
@@ -218,8 +218,8 @@
   {
     tapPositionAndRange_t *tp = [[tapPositionAndRange_t alloc] init];
     
-    tp.coldTapPos = t.second.x;
-    tp.warmTapPos = t.second.y;
+    tp.coldTapPos = t.second.y;
+    tp.warmTapPos = t.second.x;
     
     [dict setObject:tp forKey:[NSNumber numberWithFloat:t.first]];
   }

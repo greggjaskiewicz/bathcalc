@@ -156,15 +156,19 @@ static const CGFloat fontSize = 25;
   
   NSInteger newTemp = [foo integerValue];
   
-  if (newTemp >= 0 && newTemp <= 100)
+  if (newTemp < 0 || newTemp > 100)
   {
-    return YES;
+    return NO;
   }
   
   if ([self isTemperatureValid:newTemp])
   {
     self.dialMain.temperature = newTemp;
-    
+    self.inputTextField.backgroundColor = [UIColor lightGrayColor];
+  }
+  else
+  {
+    self.inputTextField.backgroundColor = [UIColor redColor];
   }
   
   return YES;

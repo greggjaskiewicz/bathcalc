@@ -24,11 +24,12 @@ static const double calc_temp(double a, double b, double x, double y)
 {
   double temperature = 0.0;
   double t, l;
+  // ((Va * Ta) + (Vb * Tb)) / (Va+Vb) = Tf
   
   t = (x*a) + (y*b);
   l = x + y;
   temperature = t / l;
-  
+
   return temperature;
 }
 
@@ -40,9 +41,9 @@ static const temps_t discover(double flowx, double flowy, double tempx, double t
   {
     for(double y=0.0001; y<=1.0; y+=0.001)
     {
-      double temp = roundf(calc_temp(tempx, tempy, x*flowx, y*flowy)*10);
+      double temp = roundf(calc_temp(tempy, tempx, y*flowy, x*flowx)*10);
       temp = temp/10.0;
-      if (!(temp >= tempx && temp <= tempy))
+      if (!(temp >= tempy && temp <= tempx))
       {
         continue;
       }
@@ -81,7 +82,7 @@ temps_settings_t precalcualte_table_for(double flowx, double flowy, double tempx
   temps_t temps;
   temps_settings_t best_settings;
   
-  temps = discover(10, 12, 10, 60);
+  temps = discover(tempx, flowx, tempy, flowy);
   
   for(auto tempx : temps)
   {
