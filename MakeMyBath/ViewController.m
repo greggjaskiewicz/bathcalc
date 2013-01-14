@@ -188,7 +188,7 @@
   self.settingsButton.frame = CGRectMake(self.view.frame.size.width - 40, self.view.frame.size.height - 40,
                                          self.settingsButton.frame.size.width, self.settingsButton.frame.size.height);
   
-  //  [self animateTemp];
+  [self updateTemperatureWithColdTap:self.coldTap.currentValue warmTap:self.warmTap.currentValue];
 }
 
 - (void)didReceiveMemoryWarning

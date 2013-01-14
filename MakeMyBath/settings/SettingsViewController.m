@@ -132,9 +132,23 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   self.temperatureCalculator.warmFlow = [self.warmTapFlow.text floatValue];
 }
 
+- (void)tapped:(id)foo
+{
+  [self resignFirstResponder];
+  [self.coldTapTemp resignFirstResponder];
+  [self.coldTapFlow resignFirstResponder];
+  [self.warmTapTemp resignFirstResponder];
+  [self.warmTapFlow resignFirstResponder];
+}
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+
+  [self.view addGestureRecognizer:tap];
+  
   self.busyView.hidden = YES;
   self.busyView.layer.cornerRadius = 8;
   [self setFields];
