@@ -31,6 +31,6 @@
 - (CGFloat)updateCalculationWithTemperature:(CGFloat)sampleTemperature sampleMass:(CGFloat)sampleMass;
 - (void)reset;
 - (void)setDefaults;
-- (void)updatePositionTableUsing:(CGFloat)coldTemp warmTemp:(CGFloat)warmTemp coldFlow:(CGFloat)coldFlow warmFlow:(CGFloat)warmFlow;
+- (void)updatePositionTable;
 
 @end

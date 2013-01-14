@@ -55,10 +55,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
   _currentValue = currentValue;
   self.feedbackView.value = currentValue;
   
-  CGFloat deltaRotation = currentValue * 359.9 - _currentRotation;
+  CGFloat deltaRotation = currentValue * 359.999999f - _currentRotation;
   
   [self rotateLayer:self.tapImageView.layer by:deltaRotation];
-  self.currentRotation = currentValue * 359.9;
+  self.currentRotation = currentValue * 359.999999f;
+  
+  NSLog(@"current value: %f, current rotation: %f", _currentValue, _currentRotation);
 }
 
 - (void)setCurrentRotation:(double)currentRotation
@@ -111,9 +113,9 @@ static double wrap(double val, double min, double max)
   
   //  NSLog(@"delta Angle %f, from: %f, to: %f", deltaAngle, fromAngle, toAngle);
   
-  if (self.currentRotation + deltaAngle > 359)
+  if (self.currentRotation + deltaAngle > 360)
   {
-    deltaAngle = 359 - self.currentRotation;
+    deltaAngle = 360 - self.currentRotation;
   }
   
   if (self.currentRotation + deltaAngle < 0.0)

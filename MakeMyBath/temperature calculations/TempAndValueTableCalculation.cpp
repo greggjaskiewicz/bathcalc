@@ -14,44 +14,45 @@
 #include <vector>
 #include <map>
 
-typedef std::vector<xy_t> xys_t;
-typedef std::map<double, xys_t> temps_t;
+typedef std::vector<tapVal_t> tapsValArray_t;
+
+typedef std::map<double, tapsValArray_t> temps_t;
 
 // calculate x and y
 // (x*a) +  (y*b) = (c*x) + (c*y)
 
-static const double calc_temp(double a, double b, double x, double y)
+static const double calc_temp(const double warmtemp, const double coldtemp, const double warmflow, const double coldflow)
 {
   double temperature = 0.0;
   double t, l;
   // ((Va * Ta) + (Vb * Tb)) / (Va+Vb) = Tf
   
-  t = (x*a) + (y*b);
-  l = x + y;
+  t = (coldflow*coldtemp) + (warmflow*warmtemp);
+  l = warmflow + coldflow;
   temperature = t / l;
 
   return temperature;
 }
 
-static const temps_t discover(double flowx, double flowy, double tempx, double tempy)
+static const temps_t discover(const double coldFlow, const double warmFlow, const double coldTemp, const double warmTemp)
 {
   temps_t temps;
   
-  for(double x=0.0001; x<=1.0; x+=0.001)
+  for(double coldtap=0.0001; coldtap<=1.0; coldtap+=0.001)
   {
-    for(double y=0.0001; y<=1.0; y+=0.001)
+    for(double warmtap=0.0001; warmtap<=1.0; warmtap+=0.001)
     {
-      double temp = roundf(calc_temp(tempy, tempx, y*flowy, x*flowx)*10);
+      double temp = roundf(calc_temp(warmTemp, coldTemp, warmtap*warmFlow, coldtap*coldFlow)*10);
       temp = temp/10.0;
-      if (!(temp >= tempy && temp <= tempx))
+      if (!(temp >= coldTemp && temp <= warmTemp))
       {
         continue;
       }
       
-      xy_t xy;
+      tapVal_t xy;
       
-      xy.x = x;
-      xy.y = y;
+      xy.warm = warmtap;
+      xy.cold = coldtap;
       
       temps[temp].push_back(xy);
     }
@@ -60,15 +61,15 @@ static const temps_t discover(double flowx, double flowy, double tempx, double t
   return temps;
 }
 
-static const xy_t pick_best(xys_t &xys)
+static const tapVal_t pick_best(const tapsValArray_t &xys)
 {
-  xy_t best;
-  best.x = 0;
-  best.y = 0;
+  tapVal_t best;
+  best.warm = 0;
+  best.cold = 0;
   
-  for(xy_t xy : xys)
+  for(tapVal_t xy : xys)
   {
-    if (xy.y*xy.x > best.x*best.y && 1-(xy.x+xy.y) > 0 && 1-(xy.x+xy.y) < 1-(best.x+best.y)  )
+    if (xy.cold+xy.warm > best.warm+best.cold  &&  1-(xy.warm+xy.cold) > 0  &&  1-(xy.warm+xy.cold) < 1-(best.warm+best.cold))
     {
       best = xy;
     }
@@ -77,21 +78,21 @@ static const xy_t pick_best(xys_t &xys)
   return best;
 }
 
-temps_settings_t precalcualte_table_for(double flowx, double flowy, double tempx, double tempy)
+tapValues_t precalcualte_table_for(const double coldFlow, const double warmFlow, const double coldTemp, const double warmTemp)
 {
   temps_t temps;
-  temps_settings_t best_settings;
-  
-  temps = discover(tempx, flowx, tempy, flowy);
+  tapValues_t best_settings;
+
+  temps = discover(coldFlow, warmFlow, coldTemp, warmTemp);
   
   for(auto tempx : temps)
   {
     double temp = tempx.first;
-    xys_t xys = tempx.second;
-    xy_t best = pick_best(xys);
+    tapsValArray_t xys = tempx.second;
+    tapVal_t best = pick_best(xys);
 
-#ifdef _DEBUG_
-    std::cout << "for temp:" << temp << " found " << xys.size() << " entries, best x:" << best.x << ", y: " << best.y << std::endl;
+#ifdef DEBUG
+    std::cout << "for temp:" << temp << " found " << xys.size() << " entries, best warm:" << best.warm << ", cold: " << best.cold << std::endl;
 #endif
     
     best_settings[temp] = best;

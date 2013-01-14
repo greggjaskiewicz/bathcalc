@@ -117,7 +117,7 @@
       
       [[NSUserDefaults standardUserDefaults] setFloat:warmFlow forKey:@"warmFlow"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+      [self updatePositionTable];
     });
   }
 }
@@ -132,7 +132,7 @@
       
       [[NSUserDefaults standardUserDefaults] setFloat:warmTemp forKey:@"warmTemp"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+      [self updatePositionTable];
     });
   }
 }
@@ -147,7 +147,7 @@
       
       [[NSUserDefaults standardUserDefaults] setFloat:coldFlow forKey:@"coldFlow"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+      [self updatePositionTable];
     });
   }
 }
@@ -162,7 +162,7 @@
       [[NSUserDefaults standardUserDefaults] setFloat:coldTemp forKey:@"coldTemp"];
       [[NSUserDefaults standardUserDefaults] synchronize];
       
-      [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+      [self updatePositionTable];
     });
   }
 }
@@ -179,7 +179,7 @@
     _warmFlow = -1;
     _warmTemp = -1;
     
-    [self updatePositionTableUsing:self.coldTemp warmTemp:self.warmTemp coldFlow:self.coldFlow warmFlow:self.warmFlow];
+    [self updatePositionTable];
   }
   
   return self;
@@ -225,22 +225,22 @@
   return self.temperature;
 }
 
-- (void)updatePositionTableUsing:(CGFloat)coldTemp warmTemp:(CGFloat)warmTemp coldFlow:(CGFloat)coldFlow warmFlow:(CGFloat)warmFlow
+- (void)updatePositionTable
 {
-  if (coldFlow == -1 || warmFlow == -1 || warmTemp == -1 || coldTemp == -1)
+  if (self.coldTemp == -1 || self.warmTemp == -1 || self.coldFlow == -1 || self.warmFlow == -1)
   {
     return;
   }
   
-  temps_settings_t temps = precalcualte_table_for(coldFlow, warmFlow, coldTemp, warmTemp);
-  
+  tapValues_t temps = precalcualte_table_for(self.coldFlow, self.warmFlow, self.coldTemp, self.warmTemp);
+
   NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:temps.size()];
   for(auto t : temps)
   {
     tapPositionAndRange_t *tp = [[tapPositionAndRange_t alloc] init];
     
-    tp.coldTapPos = t.second.y;
-    tp.warmTapPos = t.second.x;
+    tp.coldTapPos = t.second.cold;
+    tp.warmTapPos = t.second.warm;
     
     [dict setObject:tp forKey:[NSNumber numberWithFloat:t.first]];
   }

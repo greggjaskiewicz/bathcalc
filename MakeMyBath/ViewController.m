@@ -41,7 +41,7 @@
   [self.tCalculator updateCalculationWithTemperature:self.tCalculator.coldTemp sampleMass:self.tCalculator.coldFlow * coldTap];
   
   self.temperatureDial.temperature = self.tCalculator.temperature;
-#ifdef _DEBUG_
+#ifdef DEBUG
   NSLog(@"Temperature %f", self.tCalculator.temperature);
 #endif
 }

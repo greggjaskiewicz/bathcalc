@@ -177,10 +177,7 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
     
-    [self.temperatureCalculator updatePositionTableUsing:self.temperatureCalculator.coldTemp
-                                                warmTemp:self.temperatureCalculator.warmTemp
-                                                coldFlow:self.temperatureCalculator.coldFlow
-                                                warmFlow:self.temperatureCalculator.warmFlow];
+    [self.temperatureCalculator updatePositionTable];
     
     dispatch_async(dispatch_get_main_queue(), ^{
       self.busyView.hidden = NO;

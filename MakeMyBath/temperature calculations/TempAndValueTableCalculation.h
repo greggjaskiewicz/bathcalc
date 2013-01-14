@@ -12,14 +12,14 @@
 #include <vector>
 #include <map>
 
-struct xy_t
+struct tapVal_t
 {
-  double x;
-  double y;
+  double cold;
+  double warm;
 };
 
-typedef std::map<float, xy_t> temps_settings_t;
-temps_settings_t precalcualte_table_for(double flowx, double flowy, double tempx, double tempy);
+typedef std::map<float, tapVal_t> tapValues_t;
+tapValues_t precalcualte_table_for(const double coldFlow, const double warmFlow, const double coldTemp, const double warmTemp);
 
 
 #endif /* defined(__BathCalc__TempAndValueTableCalculation__) */
