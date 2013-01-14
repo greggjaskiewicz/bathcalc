@@ -117,7 +117,7 @@
       
       [[NSUserDefaults standardUserDefaults] setFloat:warmFlow forKey:@"warmFlow"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTable];
+      //      [self updatePositionTable];
     });
   }
 }
@@ -132,7 +132,7 @@
       
       [[NSUserDefaults standardUserDefaults] setFloat:warmTemp forKey:@"warmTemp"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTable];
+      //      [self updatePositionTable];
     });
   }
 }
@@ -141,13 +141,12 @@
 {
   if (coldFlow != _coldFlow)
   {
-    
     _coldFlow = coldFlow;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
       [[NSUserDefaults standardUserDefaults] setFloat:coldFlow forKey:@"coldFlow"];
       [[NSUserDefaults standardUserDefaults] synchronize];
-      [self updatePositionTable];
+      //      [self updatePositionTable];
     });
   }
 }
@@ -162,7 +161,7 @@
       [[NSUserDefaults standardUserDefaults] setFloat:coldTemp forKey:@"coldTemp"];
       [[NSUserDefaults standardUserDefaults] synchronize];
       
-      [self updatePositionTable];
+      //      [self updatePositionTable];
     });
   }
 }
