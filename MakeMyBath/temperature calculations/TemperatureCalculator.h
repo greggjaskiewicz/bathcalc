@@ -18,18 +18,19 @@
 
 @interface TemperatureCalculator : NSObject
 
-@property(readonly) CGFloat temperature;
-@property(readonly) CGFloat mass;
 @property(readonly, strong) NSDictionary *position_table_for_temps;
+@property(readonly)  CGFloat temperature;
+@property(readonly)  CGFloat mass;
 
-@property(readonly, nonatomic) CGFloat coldTemp;
-@property(readonly, nonatomic) CGFloat warmTemp;
-@property(readonly, nonatomic) CGFloat coldFlow;
-@property(readonly, nonatomic) CGFloat warmFlow;
+@property(nonatomic) CGFloat coldTemp;
+@property(nonatomic) CGFloat warmTemp;
+@property(nonatomic) CGFloat coldFlow;
+@property(nonatomic) CGFloat warmFlow;
 
 
 - (CGFloat)updateCalculationWithTemperature:(CGFloat)sampleTemperature sampleMass:(CGFloat)sampleMass;
 - (void)reset;
+- (void)setDefaults;
 - (void)updatePositionTableUsing:(CGFloat)coldTemp warmTemp:(CGFloat)warmTemp coldFlow:(CGFloat)coldFlow warmFlow:(CGFloat)warmFlow;
 
 @end

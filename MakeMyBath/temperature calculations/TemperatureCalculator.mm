@@ -15,11 +15,6 @@
 @property CGFloat mass;
 @property(strong) NSDictionary *position_table_for_temps;
 
-@property(nonatomic) CGFloat coldTemp;
-@property(nonatomic) CGFloat warmTemp;
-@property(nonatomic) CGFloat coldFlow;
-@property(nonatomic) CGFloat warmFlow;
-
 @end
 
 
@@ -170,6 +165,14 @@
   }
   
   return self;
+}
+
+- (void)setDefaults
+{
+  self.coldTemp = 10;
+  self.warmTemp = 60;
+  self.coldFlow = 12;
+  self.warmFlow = 10;
 }
 
 - (void)reset

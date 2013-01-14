@@ -18,6 +18,7 @@
 		2767487616A22A2200BD9472 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487516A22A2200BD9472 /* Default.png */; };
 		2767487816A22A2600BD9472 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487716A22A2600BD9472 /* Default@2x.png */; };
 		2767487A16A22A2A00BD9472 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487916A22A2900BD9472 /* Default-568h@2x.png */; };
+		27A18EEB16A49CC70050AFA0 /* NSString+bath.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A18EEA16A49CC60050AFA0 /* NSString+bath.m */; };
 		27B811F016961D890055E964 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811EF16961D890055E964 /* UIKit.framework */; };
 		27B811F216961D890055E964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F116961D890055E964 /* Foundation.framework */; };
 		27B811F416961D890055E964 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F316961D890055E964 /* CoreGraphics.framework */; };
@@ -66,6 +67,8 @@
 		2767487516A22A2200BD9472 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2767487716A22A2600BD9472 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2767487916A22A2900BD9472 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		27A18EE916A49CC60050AFA0 /* NSString+bath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+bath.h"; sourceTree = "<group>"; };
+		27A18EEA16A49CC60050AFA0 /* NSString+bath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+bath.m"; sourceTree = "<group>"; };
 		27B811EC16961D890055E964 /* BathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B811EF16961D890055E964 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27B811F116961D890055E964 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,6 +190,8 @@
 				27B8120816961D890055E964 /* ViewController.m */,
 				27B8120A16961D890055E964 /* ViewController.xib */,
 				27B811F616961D890055E964 /* Supporting Files */,
+				27A18EE916A49CC60050AFA0 /* NSString+bath.h */,
+				27A18EEA16A49CC60050AFA0 /* NSString+bath.m */,
 			);
 			name = BathCalc;
 			path = MakeMyBath;
@@ -385,6 +390,7 @@
 				2767485D169DD72800BD9472 /* DialTemperatureEntryViewController.m in Sources */,
 				2767486416A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp in Sources */,
 				2767486916A21D7600BD9472 /* SettingsViewController.m in Sources */,
+				27A18EEB16A49CC70050AFA0 /* NSString+bath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
