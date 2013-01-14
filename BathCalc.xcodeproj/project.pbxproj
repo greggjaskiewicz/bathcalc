@@ -15,15 +15,15 @@
 		2767486A16A21D7600BD9472 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767486816A21D7600BD9472 /* SettingsViewController.xib */; };
 		2767486D16A2210100BD9472 /* settings_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767486B16A2210000BD9472 /* settings_background.png */; };
 		2767486E16A2210100BD9472 /* settings_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767486C16A2210000BD9472 /* settings_background@2x.png */; };
+		2767487616A22A2200BD9472 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487516A22A2200BD9472 /* Default.png */; };
+		2767487816A22A2600BD9472 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487716A22A2600BD9472 /* Default@2x.png */; };
+		2767487A16A22A2A00BD9472 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2767487916A22A2900BD9472 /* Default-568h@2x.png */; };
 		27B811F016961D890055E964 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811EF16961D890055E964 /* UIKit.framework */; };
 		27B811F216961D890055E964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F116961D890055E964 /* Foundation.framework */; };
 		27B811F416961D890055E964 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B811F316961D890055E964 /* CoreGraphics.framework */; };
 		27B811FA16961D890055E964 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B811F816961D890055E964 /* InfoPlist.strings */; };
 		27B811FC16961D890055E964 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B811FB16961D890055E964 /* main.m */; };
 		27B8120016961D890055E964 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B811FF16961D890055E964 /* AppDelegate.m */; };
-		27B8120216961D890055E964 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120116961D890055E964 /* Default.png */; };
-		27B8120416961D890055E964 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120316961D890055E964 /* Default@2x.png */; };
-		27B8120616961D890055E964 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120516961D890055E964 /* Default-568h@2x.png */; };
 		27B8120916961D890055E964 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8120816961D890055E964 /* ViewController.m */; };
 		27B8120C16961D890055E964 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8120A16961D890055E964 /* ViewController.xib */; };
 		27B812321696207B0055E964 /* cold_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B8122B1696207B0055E964 /* cold_tap.png */; };
@@ -63,6 +63,9 @@
 		2767486816A21D7600BD9472 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = settings/SettingsViewController.xib; sourceTree = "<group>"; };
 		2767486B16A2210000BD9472 /* settings_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_background.png; path = resources/settings_background.png; sourceTree = "<group>"; };
 		2767486C16A2210000BD9472 /* settings_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_background@2x.png"; path = "resources/settings_background@2x.png"; sourceTree = "<group>"; };
+		2767487516A22A2200BD9472 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2767487716A22A2600BD9472 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2767487916A22A2900BD9472 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		27B811EC16961D890055E964 /* BathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B811EF16961D890055E964 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27B811F116961D890055E964 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,9 +76,6 @@
 		27B811FD16961D890055E964 /* BathCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BathCalc-Prefix.pch"; sourceTree = "<group>"; };
 		27B811FE16961D890055E964 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27B811FF16961D890055E964 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27B8120116961D890055E964 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		27B8120316961D890055E964 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		27B8120516961D890055E964 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		27B8120716961D890055E964 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		27B8120816961D890055E964 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27B8120B16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
@@ -143,6 +143,9 @@
 		27B811E316961D890055E964 = {
 			isa = PBXGroup;
 			children = (
+				2767487916A22A2900BD9472 /* Default-568h@2x.png */,
+				2767487716A22A2600BD9472 /* Default@2x.png */,
+				2767487516A22A2200BD9472 /* Default.png */,
 				27B811F516961D890055E964 /* BathCalc */,
 				27B8121916961D890055E964 /* MakeMyBathTests */,
 				27B811EE16961D890055E964 /* Frameworks */,
@@ -196,9 +199,6 @@
 				27B811F816961D890055E964 /* InfoPlist.strings */,
 				27B811FB16961D890055E964 /* main.m */,
 				27B811FD16961D890055E964 /* BathCalc-Prefix.pch */,
-				27B8120116961D890055E964 /* Default.png */,
-				27B8120316961D890055E964 /* Default@2x.png */,
-				27B8120516961D890055E964 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -338,9 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B811FA16961D890055E964 /* InfoPlist.strings in Resources */,
-				27B8120216961D890055E964 /* Default.png in Resources */,
-				27B8120416961D890055E964 /* Default@2x.png in Resources */,
-				27B8120616961D890055E964 /* Default-568h@2x.png in Resources */,
 				27B8120C16961D890055E964 /* ViewController.xib in Resources */,
 				27B812321696207B0055E964 /* cold_tap.png in Resources */,
 				27B812341696207B0055E964 /* dial.png in Resources */,
@@ -363,6 +360,9 @@
 				2767486A16A21D7600BD9472 /* SettingsViewController.xib in Resources */,
 				2767486D16A2210100BD9472 /* settings_background.png in Resources */,
 				2767486E16A2210100BD9472 /* settings_background@2x.png in Resources */,
+				2767487616A22A2200BD9472 /* Default.png in Resources */,
+				2767487816A22A2600BD9472 /* Default@2x.png in Resources */,
+				2767487A16A22A2A00BD9472 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+
+#define IS_IPHONE_5 ([[UIScreen mainScreen] bounds].size.height == 568.0f)
 
 @implementation AppDelegate
 
@@ -24,6 +25,30 @@
   
   self.window.rootViewController = self.viewController;
   [self.window makeKeyAndVisible];
+  
+  NSString *d = @"Default.png";
+  
+  if (IS_IPHONE_5)
+  {
+    d = @"Default-568h.png";
+  }
+  
+  UIImageView *splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:d]];
+  [self.window.rootViewController.view addSubview:splashScreen];
+  
+  [self.window makeKeyAndVisible];
+  
+  [UIView animateWithDuration:0.3
+                   animations:
+   ^{
+     splashScreen.alpha = 0.0;
+   }
+                   completion:(void (^)(BOOL))
+   ^{
+     [splashScreen removeFromSuperview];
+   }
+   ];
+
   return YES;
 }
 
