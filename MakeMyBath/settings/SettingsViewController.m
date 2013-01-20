@@ -38,22 +38,9 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   {
     self.temperatureCalculator = temperatureCalculator;
   }
+  
   return self;
 }
-
-
-/*
- - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;        // return NO to disallow editing.
- - (void)textFieldDidBeginEditing:(UITextField *)textField;           // became first responder
- - (BOOL)textFieldShouldEndEditing:(UITextField *)textField;          // return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
- - (void)textFieldDidEndEditing:(UITextField *)textField;             // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
- 
- - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;   // return NO to not change text
- 
- - (BOOL)textFieldShouldClear:(UITextField *)textField;               // called when clear button pressed. return NO to ignore (no notifications)
- - (BOOL)textFieldShouldReturn:(UITextField *)textField;              // called when 'return' key pressed. return NO to ignore.
- */
-
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -144,27 +131,27 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-
+  
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-
+  
   [self.view addGestureRecognizer:tap];
   
   self.busyView.hidden = YES;
   self.busyView.layer.cornerRadius = 8;
+
   [self setFields];
 }
 
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)done:(UIButton*)foo
+- (IBAction)done:(id)sender
 {
   [self tapped:nil];
   self.busyView.hidden = NO;
-
+  
   self.warmTapFlow.enabled = NO;
   self.coldTapFlow.enabled = NO;
   self.warmTapTemp.enabled = NO;
@@ -181,23 +168,24 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
     
     dispatch_async(dispatch_get_main_queue(), ^{
       self.busyView.hidden = NO;
-      [self dismissModalViewControllerAnimated:YES];
+      [self dismissViewControllerAnimated:YES completion:^{
+        self.temperatureCalculator = nil;
+      }];
     });
   });
 }
 
-- (IBAction)cancel:(UIButton*)foo
+- (IBAction)cancel:(id)sender
 {
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:^{
+    self.temperatureCalculator = nil;
+  }];
 }
 
-
-- (IBAction)setDefaults:(UIButton*)foo
+- (IBAction)setDefaults:(id)sender
 {
   [self.temperatureCalculator setDefaults];
   [self setFields];
 }
-
-
 
 @end

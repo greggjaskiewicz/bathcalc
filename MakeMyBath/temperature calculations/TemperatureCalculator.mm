@@ -13,6 +13,8 @@
 
 @property CGFloat temperature;
 @property CGFloat mass;
+@property BOOL    recalculation_required;
+
 @property(strong) NSDictionary *position_table_for_temps;
 
 @end
@@ -112,6 +114,8 @@
 {
   if (_warmFlow != warmFlow)
   {
+    self.recalculation_required = YES;
+
     _warmFlow = warmFlow;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
@@ -127,6 +131,8 @@
 {
   if (warmTemp != _warmTemp)
   {
+    self.recalculation_required = YES;
+    
     _warmTemp = warmTemp;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
@@ -141,6 +147,8 @@
 {
   if (coldFlow != _coldFlow)
   {
+    self.recalculation_required = YES;
+    
     _coldFlow = coldFlow;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
@@ -155,6 +163,8 @@
 {
   if (coldTemp != _coldTemp)
   {
+    self.recalculation_required = YES;
+    
     _coldTemp = coldTemp;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
@@ -177,6 +187,7 @@
     _coldFlow = -1;
     _warmFlow = -1;
     _warmTemp = -1;
+    self.recalculation_required = YES;
     
     [self updatePositionTable];
   }
@@ -226,7 +237,7 @@
 
 - (void)updatePositionTable
 {
-  if (self.coldTemp == -1 || self.warmTemp == -1 || self.coldFlow == -1 || self.warmFlow == -1)
+  if (self.coldTemp == -1 || self.warmTemp == -1 || self.coldFlow == -1 || self.warmFlow == -1 || !self.recalculation_required)
   {
     return;
   }
@@ -245,6 +256,7 @@
   }
   
   self.position_table_for_temps = [dict copy];
+  self.recalculation_required = NO;
 }
 
 @end

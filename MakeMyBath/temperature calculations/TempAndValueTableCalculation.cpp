@@ -92,7 +92,7 @@ tapValues_t precalcualte_table_for(const double coldFlow, const double warmFlow,
     tapVal_t best = pick_best(xys);
 
 #ifdef DEBUG
-    std::cout << "for temp:" << temp << " found " << xys.size() << " entries, best warm:" << best.warm << ", cold: " << best.cold << std::endl;
+    //    std::cout << "for temp:" << temp << " found " << xys.size() << " entries, best warm:" << best.warm << ", cold: " << best.cold << std::endl;
 #endif
     
     best_settings[temp] = best;
