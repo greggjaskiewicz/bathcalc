@@ -148,13 +148,14 @@
   
   NSString *deviceInfo = @"";
 
+/*
   NSBundle *bundle = [NSBundle mainBundle];
   NSDictionary *info = [bundle infoDictionary];
   if (info[@"SignerIdentity"])
   {
     deviceInfo = [deviceInfo stringByAppendingString:@"I DIDN'T BUY THIS APP!!!!!!!!!!!!\n\n"];
   }
-  
+*/
   deviceInfo = [deviceInfo stringByAppendingFormat:@"name: %@\n",           [[UIDevice currentDevice] name]];
   deviceInfo = [deviceInfo stringByAppendingFormat:@"systemName: %@\n",     [[UIDevice currentDevice] systemName]];
   deviceInfo = [deviceInfo stringByAppendingFormat:@"systemVersion: %@\n",  [[UIDevice currentDevice] systemVersion]];
