@@ -161,7 +161,7 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   self.coldTapTemp.enabled = NO;
   self.doneButton.enabled  = NO;
   self.cancel.enabled      = NO;
-  self.
+  self.about.enabled       = NO;
   self.defaultbutton.enabled = NO;
   
   [self saveValues];

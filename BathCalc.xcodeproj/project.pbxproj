@@ -89,10 +89,6 @@
 		27B8120816961D890055E964 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27B8120B16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		27B8121316961D890055E964 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		27B8121B16961D890055E964 /* MakeMyBathTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakeMyBathTests-Info.plist"; sourceTree = "<group>"; };
-		27B8121D16961D890055E964 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		27B8121F16961D890055E964 /* MakeMyBathTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeMyBathTests.h; sourceTree = "<group>"; };
-		27B8122016961D890055E964 /* MakeMyBathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeMyBathTests.m; sourceTree = "<group>"; };
 		27B8122B1696207B0055E964 /* cold_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cold_tap.png; path = resources/cold_tap.png; sourceTree = "<group>"; };
 		27B8122C1696207B0055E964 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = resources/dial.png; sourceTree = "<group>"; };
 		27B8122D1696207B0055E964 /* hot_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hot_tap.png; path = resources/hot_tap.png; sourceTree = "<group>"; };
@@ -165,7 +161,6 @@
 				2767487716A22A2600BD9472 /* Default@2x.png */,
 				2767487516A22A2200BD9472 /* Default.png */,
 				27B811F516961D890055E964 /* BathCalc */,
-				27B8121916961D890055E964 /* MakeMyBathTests */,
 				27B811EE16961D890055E964 /* Frameworks */,
 				27B811ED16961D890055E964 /* Products */,
 			);
@@ -222,25 +217,6 @@
 				27B811F816961D890055E964 /* InfoPlist.strings */,
 				27B811FB16961D890055E964 /* main.m */,
 				27B811FD16961D890055E964 /* BathCalc-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		27B8121916961D890055E964 /* MakeMyBathTests */ = {
-			isa = PBXGroup;
-			children = (
-				27B8121F16961D890055E964 /* MakeMyBathTests.h */,
-				27B8122016961D890055E964 /* MakeMyBathTests.m */,
-				27B8121A16961D890055E964 /* Supporting Files */,
-			);
-			path = MakeMyBathTests;
-			sourceTree = "<group>";
-		};
-		27B8121A16961D890055E964 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				27B8121B16961D890055E964 /* MakeMyBathTests-Info.plist */,
-				27B8121C16961D890055E964 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -462,14 +438,6 @@
 				27B8120B16961D890055E964 /* en */,
 			);
 			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
-		27B8121C16961D890055E964 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27B8121D16961D890055E964 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

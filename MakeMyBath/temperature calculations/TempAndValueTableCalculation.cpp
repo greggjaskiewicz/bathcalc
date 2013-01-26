@@ -38,12 +38,12 @@ static const temps_t discover(const double coldFlow, const double warmFlow, cons
 {
   temps_t temps;
   
-  for(double coldtap=0.0001; coldtap<=1.0; coldtap+=0.001)
+  for(double coldtap=0.0001; coldtap<=1.0; coldtap+=0.0025)
   {
-    for(double warmtap=0.0001; warmtap<=1.0; warmtap+=0.001)
+    for(double warmtap=0.0001; warmtap<=1.0; warmtap+=0.0025)
     {
-      double temp = roundf(calc_temp(warmTemp, coldTemp, warmtap*warmFlow, coldtap*coldFlow)*10);
-      temp = temp/10.0;
+      double temp = roundf(calc_temp(warmTemp, coldTemp, warmtap*warmFlow, coldtap*coldFlow)*5);
+      temp = temp/5.0;
       if (!(temp >= coldTemp && temp <= warmTemp))
       {
         continue;

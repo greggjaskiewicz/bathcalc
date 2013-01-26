@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Greg Jaskiewicz. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "ViewController.h"
 #import "TapViewController.h"
 #import "DialViewController.h"
@@ -25,6 +27,7 @@
 @property(nonatomic, strong) DialViewController *temperatureDial;
 
 @property(nonatomic, strong) UIButton           *settingsButton;
+@property(nonatomic, strong) UILabel            *versionInfo;
 @property(nonatomic)         NSTimeInterval      lastTimeChange;
 @property(nonatomic)         TemperatureCalculator *tCalculator;
 
@@ -88,7 +91,7 @@
 
 - (void)dialViewController:(DialViewController*)dialViewController newTemperature:(CGFloat)newTemperature
 {
-  float nf = roundf((newTemperature*10.0))/10.0;
+  float nf = roundf((newTemperature*5.0))/5.0;
   NSNumber *nt = @(nf);
   tapPositionAndRange_t *pos = self.tCalculator.position_table_for_temps[nt];
 
@@ -172,6 +175,19 @@
   [self.settingsButton addTarget:self action:@selector(showSettings:) forControlEvents:UIControlEventTouchUpInside];
 
   [self.view addSubview:self.settingsButton];
+  
+  self.versionInfo = [[UILabel alloc] init];
+  self.versionInfo.backgroundColor = [UIColor blackColor];
+  self.versionInfo.textColor       = [UIColor lightGrayColor];
+  self.versionInfo.layer.cornerRadius = 5.0f;
+  self.versionInfo.textAlignment   = NSTextAlignmentCenter;
+  
+  self.versionInfo.font = [UIFont systemFontOfSize:11];
+  
+  self.versionInfo.alpha = 0.75f;
+  
+  [self.view addSubview:self.versionInfo];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -191,7 +207,28 @@
   self.settingsButton.frame = CGRectMake(self.view.frame.size.width - 40, self.view.frame.size.height - 40,
                                          self.settingsButton.frame.size.width, self.settingsButton.frame.size.height);
   
+  self.versionInfo.frame    = CGRectMake(10, self.view.frame.size.height - 40,
+                                         self.versionInfo.frame.size.width, self.versionInfo.frame.size.height);
+  
+  [self setVersionInfo];
+  
   [self updateTemperatureWithColdTap:self.coldTap.currentValue warmTap:self.warmTap.currentValue];
+}
+
+- (void)setVersionInfo
+{
+  NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+  NSString *version = infoDictionary[@"CFBundleShortVersionString"];
+  NSString *build = infoDictionary[@"CFBundleVersion"];
+  
+  NSString *label = [NSString stringWithFormat:@" v%@ (build %@) ", version, build];
+
+  self.versionInfo.text = label;
+
+  CGSize newSize = [self.versionInfo sizeThatFits:CGSizeMake(100, 25)];
+  
+  CGRect newFrame = CGRectMake(self.versionInfo.frame.origin.x, self.versionInfo.frame.origin.y, newSize.width*1.15, newSize.height*1.33);
+  self.versionInfo.frame = newFrame;
 }
 
 - (void)didReceiveMemoryWarning
