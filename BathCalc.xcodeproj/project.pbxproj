@@ -50,6 +50,12 @@
 		27B81285169A11070055E964 /* TemperatureCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27B81284169A11070055E964 /* TemperatureCalculator.mm */; };
 		27B81289169A307F0055E964 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81288169A307F0055E964 /* TapViewController.m */; };
 		27B8128C169A30CD0055E964 /* TapStatusFeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */; };
+		27EA738816B4001900F356AF /* AboutAndContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA738616B4001900F356AF /* AboutAndContactViewController.m */; };
+		27EA738916B4001900F356AF /* AboutAndContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EA738716B4001900F356AF /* AboutAndContactViewController.xib */; };
+		27EA739C16B4207900F356AF /* feedback_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27EA739B16B4207900F356AF /* feedback_background.png */; };
+		27EA739E16B4208000F356AF /* feedback_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27EA739D16B4208000F356AF /* feedback_background@2x.png */; };
+		27EA73A016B4235600F356AF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EA739F16B4235600F356AF /* MessageUI.framework */; };
+		27EA73A216B4276400F356AF /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EA73A116B4276400F356AF /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +122,13 @@
 		27B81288169A307F0055E964 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapViewController.m; path = tap/TapViewController.m; sourceTree = "<group>"; };
 		27B8128A169A30CD0055E964 /* TapStatusFeedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapStatusFeedbackView.h; path = tap/TapStatusFeedbackView.h; sourceTree = "<group>"; };
 		27B8128B169A30CD0055E964 /* TapStatusFeedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapStatusFeedbackView.m; path = tap/TapStatusFeedbackView.m; sourceTree = "<group>"; };
+		27EA738516B4001900F356AF /* AboutAndContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutAndContactViewController.h; path = "about and contact/AboutAndContactViewController.h"; sourceTree = "<group>"; };
+		27EA738616B4001900F356AF /* AboutAndContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutAndContactViewController.m; path = "about and contact/AboutAndContactViewController.m"; sourceTree = "<group>"; };
+		27EA738716B4001900F356AF /* AboutAndContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutAndContactViewController.xib; path = "about and contact/AboutAndContactViewController.xib"; sourceTree = "<group>"; };
+		27EA739B16B4207900F356AF /* feedback_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback_background.png; sourceTree = "<group>"; };
+		27EA739D16B4208000F356AF /* feedback_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback_background@2x.png"; sourceTree = "<group>"; };
+		27EA739F16B4235600F356AF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		27EA73A116B4276400F356AF /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EA73A216B4276400F356AF /* Twitter.framework in Frameworks */,
+				27EA73A016B4235600F356AF /* MessageUI.framework in Frameworks */,
 				27B81256169628FB0055E964 /* QuartzCore.framework in Frameworks */,
 				27B811F016961D890055E964 /* UIKit.framework in Frameworks */,
 				27B811F216961D890055E964 /* Foundation.framework in Frameworks */,
@@ -167,6 +182,8 @@
 		27B811EE16961D890055E964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27EA73A116B4276400F356AF /* Twitter.framework */,
+				27EA739F16B4235600F356AF /* MessageUI.framework */,
 				27B81255169628FA0055E964 /* QuartzCore.framework */,
 				27B811EF16961D890055E964 /* UIKit.framework */,
 				27B811F116961D890055E964 /* Foundation.framework */,
@@ -179,6 +196,7 @@
 		27B811F516961D890055E964 /* BathCalc */ = {
 			isa = PBXGroup;
 			children = (
+				27EA738316B3FFF900F356AF /* about and contact */,
 				2767486516A21D1E00BD9472 /* settings */,
 				27B81286169A30610055E964 /* tap */,
 				27B81282169A10DE0055E964 /* temperature calculations */,
@@ -291,6 +309,18 @@
 			name = tap;
 			sourceTree = "<group>";
 		};
+		27EA738316B3FFF900F356AF /* about and contact */ = {
+			isa = PBXGroup;
+			children = (
+				27EA738516B4001900F356AF /* AboutAndContactViewController.h */,
+				27EA738616B4001900F356AF /* AboutAndContactViewController.m */,
+				27EA738716B4001900F356AF /* AboutAndContactViewController.xib */,
+				27EA739B16B4207900F356AF /* feedback_background.png */,
+				27EA739D16B4208000F356AF /* feedback_background@2x.png */,
+			);
+			name = "about and contact";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,6 +328,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B8122416961D890055E964 /* Build configuration list for PBXNativeTarget "BathCalc" */;
 			buildPhases = (
+				27EA739A16B41EFF00F356AF /* ShellScript */,
 				27B811E816961D890055E964 /* Sources */,
 				27B811E916961D890055E964 /* Frameworks */,
 				27B811EA16961D890055E964 /* Resources */,
@@ -368,10 +399,29 @@
 				2767487616A22A2200BD9472 /* Default.png in Resources */,
 				2767487816A22A2600BD9472 /* Default@2x.png in Resources */,
 				2767487A16A22A2A00BD9472 /* Default-568h@2x.png in Resources */,
+				27EA738916B4001900F356AF /* AboutAndContactViewController.xib in Resources */,
+				27EA739C16B4207900F356AF /* feedback_background.png in Resources */,
+				27EA739E16B4208000F356AF /* feedback_background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27EA739A16B41EFF00F356AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/VersioningTool \"$PRODUCT_SETTINGS_PATH\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27B811E816961D890055E964 /* Sources */ = {
@@ -391,6 +441,7 @@
 				2767486416A1FE7A00BD9472 /* TempAndValueTableCalculation.cpp in Sources */,
 				2767486916A21D7600BD9472 /* SettingsViewController.m in Sources */,
 				27A18EEB16A49CC70050AFA0 /* NSString+bath.m in Sources */,
+				27EA738816B4001900F356AF /* AboutAndContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MakeMyBath/BathCalc-Prefix.pch";
 				INFOPLIST_FILE = "MakeMyBath/BathCalc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = BathCalc;
 				WRAPPER_EXTENSION = app;
 			};
@@ -498,7 +549,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MakeMyBath/BathCalc-Prefix.pch";
 				INFOPLIST_FILE = "MakeMyBath/BathCalc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = BathCalc;
 				WRAPPER_EXTENSION = app;
 			};

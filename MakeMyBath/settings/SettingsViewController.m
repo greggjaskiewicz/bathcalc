@@ -10,6 +10,7 @@
 #import "TemperatureCalculator.h"
 #import "NSString+bath.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AboutAndContactViewController.h"
 
 @interface SettingsViewController () <UITextFieldDelegate>
 
@@ -18,6 +19,8 @@
 @property(weak, nonatomic) IBOutlet UIButton    *doneButton;
 @property(weak, nonatomic) IBOutlet UIButton    *defaultbutton;
 @property(weak, nonatomic) IBOutlet UIButton    *cancel;
+@property(weak, nonatomic) IBOutlet UIButton    *about;
+
 @property(weak, nonatomic) IBOutlet UITextField *coldTapTemp;
 @property(weak, nonatomic) IBOutlet UITextField *warmTapTemp;
 @property(weak, nonatomic) IBOutlet UITextField *coldTapFlow;
@@ -158,6 +161,7 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   self.coldTapTemp.enabled = NO;
   self.doneButton.enabled  = NO;
   self.cancel.enabled      = NO;
+  self.
   self.defaultbutton.enabled = NO;
   
   [self saveValues];
@@ -187,5 +191,15 @@ temperatureCalculator:(TemperatureCalculator*)temperatureCalculator
   [self.temperatureCalculator setDefaults];
   [self setFields];
 }
+
+
+- (IBAction)displayAbout:(id)sender
+{
+  AboutAndContactViewController *c = [[AboutAndContactViewController alloc] initWithNibName:nil bundle:nil];
+  
+  [self presentViewController:c animated:YES completion:^{
+  }];
+}
+
 
 @end

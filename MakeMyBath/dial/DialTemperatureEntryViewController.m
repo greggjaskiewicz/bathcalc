@@ -88,11 +88,11 @@ static const CGFloat fontSize = 25;
   [self.doneButton setImage:[UIImage imageNamed:@"DoneDown.png"] forState:UIControlStateHighlighted];
   
   [self.doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
-  UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+  UIWindow* tempWindow = [[UIApplication sharedApplication] windows][1];
   UIView* keyboard;
   for(NSUInteger i=0; i<[tempWindow.subviews count]; i++)
   {
-    keyboard = [tempWindow.subviews objectAtIndex:i];
+    keyboard = tempWindow.subviews[i];
     
     if ([[keyboard description] hasPrefix:@"<UIPeripheralHost"])
     {

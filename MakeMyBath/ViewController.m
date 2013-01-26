@@ -88,8 +88,9 @@
 
 - (void)dialViewController:(DialViewController*)dialViewController newTemperature:(CGFloat)newTemperature
 {
-  NSNumber *nt = [NSNumber numberWithFloat:roundf((newTemperature*10.0))/10.0];
-  tapPositionAndRange_t *pos = [self.tCalculator.position_table_for_temps objectForKey:nt];
+  float nf = roundf((newTemperature*10.0))/10.0;
+  NSNumber *nt = @(nf);
+  tapPositionAndRange_t *pos = self.tCalculator.position_table_for_temps[nt];
 
   if (pos)
   {

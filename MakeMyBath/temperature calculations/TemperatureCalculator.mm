@@ -252,7 +252,7 @@
     tp.coldTapPos = t.second.cold;
     tp.warmTapPos = t.second.warm;
     
-    [dict setObject:tp forKey:[NSNumber numberWithFloat:t.first]];
+    dict[@(t.first)] = tp;
   }
   
   self.position_table_for_temps = [dict copy];

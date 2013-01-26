@@ -28,7 +28,6 @@
 }
 
 
-
 - (void)setAngle:(CGFloat)angle
 {
   _angle = angle;
@@ -45,14 +44,15 @@ static CGPoint pointOnCircle(const CGFloat radius, const CGFloat angle)
   return CGPointMake(x,y);
 }
 
+
 - (void)drawInContext:(CGContextRef)context
 {
-  static const CGFloat pitch_line_width = 4.0;
+  static const CGFloat pitch_line_width = 4.00f;
   
   //  CGContextSetShadowWithColor(context, CGSizeMake(2,2), -1.5, [UIColor lightGrayColor].CGColor);
   
   CGFloat shadowOffset = 1.0 - sin((self.angle*M_PI)/180.0);
-  CGSize shadow = CGSizeMake(shadowOffset*2.5, shadowOffset*2);
+  CGSize shadow        = CGSizeMake(shadowOffset*2.5, shadowOffset*2);
   
   CGContextSetShadow(context, shadow, 2.5);
   
@@ -80,6 +80,7 @@ static CGPoint pointOnCircle(const CGFloat radius, const CGFloat angle)
   
   CGContextStrokePath(context);
 }
+
 
 - (id)initWithLayer:(id)layer
 {
